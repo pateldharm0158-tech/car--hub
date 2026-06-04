@@ -155,7 +155,7 @@ if (type === 'loan') {
     }
 
     // Other functions (callNow, bookNow, handleForm, renderFAQ) remain same
-    function callNow() { window.location.href = "tel:+91 9328216168"; }
+    function callNow() { window.location.href = "tel:+919328216168"; }
     function bookNow() { alert("✅ Booking request received!"); }
     function handleForm(e) { e.preventDefault(); alert("✅ Thank you!"); e.target.reset(); }
 
