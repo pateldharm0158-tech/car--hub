@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ELITECARZ - Premium Pre-Owned Cars</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50">
+
+  <!-- Header -->
+  <header class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="text-3xl font-bold">ELITECARZ</div>
+<div class="hidden md:flex gap-8 text-sm font-medium">        <a href="#" class="hover:text-red-600">Sell a Car</a>
+        <a href="#contact" class="hover:text-red-600">Contact us</a>
+      </div>
+  <div class="flex gap-5 text-xl items-center">
+
+  <i class="fa-solid fa-magnifying-glass cursor-pointer"
+     onclick="openSearch()"></i>
+
+ <i class="fa-solid fa-heart cursor-pointer text-2xl text-red-600"
+onclick="showWishlist()"></i>
+
+</div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+<section class="hero-bg min-h-screen flex items-center">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+
+        <h1 class="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
+            A Collection Built On Trust
+        </h1>
+
+        <p class="text-white text-xl md:text-2xl mb-10">
+            Handpicked Premium Pre-Owned Cars in Delhi NCR
+        </p>
+
+        <button onclick="document.getElementById('cars-section').scrollIntoView({behavior:'smooth'})"
+            class="bg-red-600 px-12 py-5 rounded-full text-xl font-semibold hover:bg-red-700">
+            View All Cars
+        </button>
+
+    </div>
+</section>
+
+  <!-- Cars Section -->
+  <section id="cars-section" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12">Featured Cars</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="car-grid"></div>
+    </div>
+  </section>
+
+  <!-- Reviews, FAQ, Contact sections same as before -->
+   <!-- Customer Reviews -->
+  <section class="py-20 bg-gray-100">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12">What Our Customers Say</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-3xl">
+          <img src="https://picsum.photos/id/64/80/80" class="w-16 h-16 rounded-full mb-4" alt="">
+          <p class="italic">"Best car buying experience. Transparent and professional."</p>
+          <div class="mt-6 font-semibold">Dalpat Raj Choudhary</div>
+        </div>
+        <div class="bg-white p-8 rounded-3xl">
+          <img src="https://picsum.photos/id/65/80/80" class="w-16 h-16 rounded-full mb-4" alt="">
+          <p class="italic">"Car was exactly as shown in photos. Highly recommended!"</p>
+          <div class="mt-6 font-semibold">Lalit Wadhwa</div>
+        </div>
+        <div class="bg-white p-8 rounded-3xl">
+          <img src="https://picsum.photos/id/66/80/80" class="w-16 h-16 rounded-full mb-4" alt="">
+          <p class="italic">"Smooth process and great after sales support."</p>
+          <div class="mt-6 font-semibold">Krishnendra Dwivedi</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+      <div class="space-y-6" id="faq-container"></div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="bg-gray-900 text-white py-20">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold mb-8">Get In Touch</h2>
+      <p class="text-2xl mb-8">+91 97111-63000</p>
+      <form onsubmit="handleForm(event)" class="max-w-md mx-auto space-y-6">
+        <input type="text" placeholder="Your Name" class="w-full p-4 rounded-2xl" required>
+        <input type="tel" placeholder="Phone Number" class="w-full p-4 rounded-2xl" required>
+        <button type="submit" class="w-full bg-red-600 py-5 rounded-2xl font-semibold">Send Message</button>
+      </form>
+    </div>
+  </section>
+  <!-- (Copy from previous code if needed) -->
+
+  <!-- CAR DETAIL MODAL -->
+  <div id="carModal" class="hidden fixed inset-0 bg-black/80 z-[100] flex items-center justify-center p-4">
+    <div class="modal bg-white max-w-6xl w-full rounded-3xl max-h-[95vh] overflow-auto">
+      <div class="sticky top-0 bg-white border-b p-4 flex justify-between items-center z-10">
+        <h2 id="modal-car-name" class="text-2xl font-bold"></h2>
+        <button onclick="closeModal()" class="text-3xl">×</button>
+      </div>
+      
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-4 md:p-8">        <!-- Image Gallery -->
+        <div>
+          <img id="main-image" class="w-full rounded-2xl shadow" alt="">
+          <div class="grid grid-cols-4 gap-3 mt-4" id="thumbnail-grid"></div>
+        </div>
+
+        <!-- Details + EMI -->
+        <div>
+          <p id="modal-price" class="text-4xl font-bold text-red-600"></p>
+          
+          <div class="grid grid-cols-2 gap-4 mt-8 text-sm">
+            <div><strong>Year:</strong> <span id="modal-year"></span></div>
+            <div><strong>Kilometers:</strong> <span id="modal-km"></span></div>
+            <div><strong>Fuel:</strong> <span id="modal-fuel"></span></div>
+            <div><strong>Transmission:</strong> <span id="modal-trans"></span></div>
+          </div>
+
+          <!-- Fixed EMI Calculator -->
+          <div class="mt-10 bg-gray-50 p-6 rounded-3xl">
+            <h3 class="font-semibold mb-6 text-lg">EMI Calculator</h3>
+            
+            <div class="space-y-8">
+              <!-- Car Price -->
+              <div class="text-center bg-white py-3 rounded-2xl">
+                <p class="text-sm text-gray-600">Car Price</p>
+                <p id="car-price-display" class="text-2xl font-bold text-red-600"></p>
+              </div>
+
+              <div>
+                <div class="flex justify-between text-sm mb-2">
+                  <span>Down Payment (Min 20%)</span>
+                  <span id="down-payment-display" class="font-semibold">₹3,75,000</span>
+                </div>
+                <input type="range" id="down-payment" min="100000" max="1000000" value="375000" step="10000" 
+                     oninput="updateEMI('down')"  class="w-full accent-red-600">
+              </div>
+
+              <div>
+                <div class="flex justify-between text-sm mb-2">
+                  <span>Loan Amount (Max 80%)</span>
+                  <span id="loan-amount-display" class="font-semibold">₹15,00,000</span>
+                </div>
+                <input type="range" id="loan-amount" min="500000" max="3000000" value="1500000" step="10000" 
+                       oninput="updateEMI('loan')" class="w-full accent-red-600">
+              </div>
+
+              <div>
+                <div class="flex justify-between text-sm mb-2">
+                  <span>Loan Tenure</span>
+                  <span id="tenure-display" class="font-semibold">5 years</span>
+                </div>
+                <input type="range" id="tenure" min="1" max="7" value="5" step="1" 
+                       oninput="updateEMI()" class="w-full accent-red-600">
+              </div>
+
+              <div class="bg-white p-6 rounded-2xl text-center border">
+                <p class="text-sm text-gray-600">Monthly EMI</p>
+                <p id="monthly-emi" class="text-4xl font-bold text-red-600">₹33,177</p>
+              </div>
+
+              <div class="grid grid-cols-3 gap-4 text-center text-sm">
+                <div>
+                  <p class="text-gray-500">Principal</p>
+                  <p id="principal" class="font-semibold">₹15,00,000</p>
+                </div>
+                <div>
+                  <p class="text-gray-500">Total Interest</p>
+                  <p id="total-interest" class="font-semibold text-orange-600">₹4,90,649</p>
+                </div>
+                <div>
+                  <p class="text-gray-500">Total Payment</p>
+                  <p id="total-payment" class="font-semibold">₹19,90,649</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-10 space-y-4">
+            <button onclick="callNow()" class="w-full bg-red-600 text-white py-5 rounded-2xl font-semibold flex items-center justify-center gap-3">
+              <i class="fa-solid fa-phone"></i> Call Now - +91 97111-63000
+            </button>
+            <button onclick="bookNow()" class="w-full bg-black text-white py-5 rounded-2xl font-semibold">Book Now (100% Refundable)</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div id="searchModal"
+class="hidden fixed inset-0 bg-white z-[9999] overflow-auto p-6">
+
+  <div class="flex justify-between items-center mb-6">
+    <input
+      type="text"
+      id="modalSearch"
+      placeholder="Search Cars..."
+      class="border w-full p-3 rounded-xl"
+      onkeyup="filterCars()">
+
+    <button onclick="closeSearch()"
+    class="ml-4 text-3xl">×</button>
+  </div>
+
+  <h2 class="text-3xl font-bold mb-6">Products</h2>
+
+  <div id="searchCarsGrid"
+       class="grid grid-cols-2 md:grid-cols-4 gap-6">
+  </div>
+
+</div>
+  <div id="wishlistPage"
+class="hidden fixed inset-0 bg-white z-[9999] overflow-auto p-6">
+
+<div class="flex justify-between items-center mb-6">
+
+<h2 class="text-3xl font-bold">
+❤️ My Wishlist
+</h2>
+
+<button onclick="closeWishlist()"
+class="text-4xl">×</button>
+
+</div>
+
+<div id="wishlistGrid"
+class="grid grid-cols-1 md:grid-cols-3 gap-6">
+</div>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
