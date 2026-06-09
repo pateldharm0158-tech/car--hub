@@ -220,7 +220,7 @@ if (type === 'loan') {
 
     // FAQ
     const faqs = [
-      {q: "How can I contact EliteCarz?", a: "Call us at +91 93282-16168 or WhatsApp anytime."},
+      {q: "How can I contact Magneto Carsz?", a: "Call us at +91 93282-16168 or WhatsApp anytime."},
       {q: "Do cars come with warranty?", a: "Yes, all cars come with minimum 6 months warranty."},
       {q: "Can I take a test drive?", a: "Yes, test drive is available at our showroom."},
       {q: "Do you provide RC transfer?", a: "Yes, we handle complete documentation and RC transfer."},
