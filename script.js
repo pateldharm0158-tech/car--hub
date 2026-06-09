@@ -80,6 +80,8 @@ images: [
     }
 
     let currentCar = null;
+    let currentImageIndex = 0;
+    let slideInterval;
 
     function openCarModal(id) {
       currentCar = cars.find(c => c.id === id);
@@ -94,6 +96,8 @@ images: [
       document.getElementById('car-price-display').textContent = currentCar.price;
 
       document.getElementById('main-image').src = currentCar.images[0];
+        currentImageIndex = 0;
+         startAutoSlide();
       const thumbGrid = document.getElementById('thumbnail-grid');
       thumbGrid.innerHTML = currentCar.images.map(img => `
         <img src="${img}" onclick="changeImage('${img}')" class="w-full h-20 object-cover rounded-xl cursor-pointer hover:ring-2 hover:ring-red-500">
@@ -117,6 +121,39 @@ images: [
     function changeImage(src) {
       document.getElementById('main-image').src = src;
     }
+    function nextImage() {
+  if (!currentCar) return;
+
+  currentImageIndex++;
+
+  if (currentImageIndex >= currentCar.images.length) {
+    currentImageIndex = 0;
+  }
+
+  document.getElementById("main-image").src =
+    currentCar.images[currentImageIndex];
+}
+
+function prevImage() {
+  if (!currentCar) return;
+
+  currentImageIndex--;
+
+  if (currentImageIndex < 0) {
+    currentImageIndex = currentCar.images.length - 1;
+  }
+
+  document.getElementById("main-image").src =
+    currentCar.images[currentImageIndex];
+}
+
+function startAutoSlide() {
+  clearInterval(slideInterval);
+
+  slideInterval = setInterval(() => {
+    nextImage();
+  }, 3000);
+}
 
     function closeModal() {
       document.getElementById('carModal').classList.add('hidden');
