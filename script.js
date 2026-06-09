@@ -5,22 +5,22 @@
   name: "2024 Mahindra XUV700 AX7",
   price: "₹22.50 Lakh",
   numericPrice: 2250000,
-  img: "images/xuv1.png",
+  img: "xuv 700/xuv 1.png",
   year: "2024",
   km: "12,000 km",
   fuel: "Diesel",
   trans: "Automatic",
 
-  images: [
-    "images/xuv1.png",
-    "images/xuv2.png",
-    "images/xuv3.png",
-    "images/xuv4.png",
-    "images/xuv5.png",
-    "images/xuv6.png",
-    "images/xuv7.png",
-    "images/xuv8.png"
-  ]
+images: [
+  "xuv 700/xuv 1.png",
+  "xuv 700/xuv 2.png",
+  "xuv 700/xuv 3.png",
+  "xuv 700/xuv 4.png",
+  "xuv 700/xuv 5.png",
+  "xuv 700/xuv 6.png",
+  "xuv 700/xuv 8.png",
+  "xuv 700/xuv 9.png"
+]
 },
       {
         id: 2,
