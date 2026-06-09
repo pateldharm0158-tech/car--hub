@@ -93,10 +93,6 @@ images: [
 
       document.getElementById('modal-car-name').textContent = currentCar.name;
       document.getElementById('modal-price').textContent = currentCar.price;
-      document.getElementById('modal-year').textContent = currentCar.year;
-      document.getElementById('modal-km').textContent = currentCar.km;
-      document.getElementById('modal-fuel').textContent = currentCar.fuel;
-      document.getElementById('modal-trans').textContent = currentCar.trans;
       document.getElementById("detail-makeyear").textContent = currentCar.makeYear;
       document.getElementById("detail-regyear").textContent = currentCar.registrationYear;
       document.getElementById("detail-owner").textContent = currentCar.ownership;
