@@ -6,10 +6,15 @@
   price: "₹22.50 Lakh",
   numericPrice: 2250000,
 img: "xuv700/xuv 5.png",
-  year: "2024",
-  km: "12,000 km",
-  fuel: "Diesel",
-  trans: "Automatic",
+fuel: "Diesel",
+trans: "Automatic",
+
+makeYear: "2024",
+registrationYear: "2024",
+ownership: "1st",
+driven: "12,000 KM",
+rto: "GJ",
+insurance: "2027",
 
 images: [
   "xuv700/xuv 5.png",
@@ -93,6 +98,15 @@ images: [
       document.getElementById('modal-km').textContent = currentCar.km;
       document.getElementById('modal-fuel').textContent = currentCar.fuel;
       document.getElementById('modal-trans').textContent = currentCar.trans;
+      document.getElementById("detail-makeyear").textContent = currentCar.makeYear;
+      document.getElementById("detail-regyear").textContent = currentCar.registrationYear;
+      document.getElementById("detail-owner").textContent = currentCar.ownership;
+      document.getElementById("detail-fuel").textContent = currentCar.fuel;
+      document.getElementById("detail-driven").textContent = currentCar.driven;
+      document.getElementById("detail-rto").textContent = currentCar.rto;
+      document.getElementById("detail-transmission").textContent = currentCar.trans;
+      document.getElementById("detail-insurance").textContent = currentCar.insurance;
+        
       document.getElementById('car-price-display').textContent = currentCar.price;
 
       document.getElementById('main-image').src = currentCar.images[0];
