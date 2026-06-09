@@ -271,6 +271,42 @@ class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/30 text-white rounded-
             </button>
             <button onclick="bookNow()" class="w-full bg-black text-white py-5 rounded-2xl font-semibold">Book Now (100% Refundable)</button>
           </div>
+      <div class="mt-12 bg-gray-50 rounded-3xl p-8">
+
+<h2 class="text-4xl font-bold mb-8">
+Benefits
+</h2>
+
+<div class="w-32 h-2 bg-red-600 rounded-full mb-10"></div>
+
+<div class="grid grid-cols-3 gap-6 text-center">
+
+<div>
+<div class="text-5xl">📄</div>
+<h3 class="font-bold text-xl">Transfer</h3>
+<p>Cost Included</p>
+</div>
+
+<div>
+<div class="text-5xl">🏅</div>
+<h3 class="font-bold text-xl">Warranty</h3>
+<p>Included</p>
+</div>
+
+<div>
+<div class="text-5xl">👍</div>
+<h3 class="font-bold text-xl">150+</h3>
+<p>Checkpoints</p>
+</div>
+
+</div>
+
+<button onclick="openWarrantyModal()"
+class="w-full mt-8 bg-red-600 text-white py-4 rounded-2xl font-bold">
+Get Extended Warranty
+</button>
+
+</div>
         </div>
       </div>
     </div>
@@ -319,6 +355,34 @@ class="grid grid-cols-1 md:grid-cols-3 gap-6">
 </div>
 
 </div>
+
+  <div id="warrantyModal"
+class="hidden fixed inset-0 bg-black/50 z-[9999] flex items-center justify-center p-4">
+
+<div class="bg-white rounded-3xl max-w-2xl w-full p-8">
+
+<div class="flex justify-between items-center mb-6">
+<h2 class="text-3xl font-bold">Want Extended Warranty?</h2>
+
+<button onclick="closeWarrantyModal()"
+class="text-4xl">
+×
+</button>
+</div>
+
+<p class="text-xl">
+Our sales executive will help you with plans,
+pricing and complete assistance at booking time.
+</p>
+
+</div>
+</div>
+
+
+
+  
+
+  
 <script src="script.js"></script>
 </body>
 </html>
