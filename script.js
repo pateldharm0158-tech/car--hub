@@ -1,17 +1,27 @@
 
     const cars = [
-      {
-        id: 1,
-        name: "2019 Land Rover Discovery Sport SE",
-        price: "₹18.75 Lakh",
-        numericPrice: 1875000,
-        img: "https://picsum.photos/id/180/800/500",
-        year: "2019",
-        km: "36,000 km",
-        fuel: "Diesel",
-        trans: "Automatic",
-        images: ["https://picsum.photos/id/180/800/500","https://picsum.photos/id/181/800/500","https://picsum.photos/id/182/800/500"]
-      },
+    {
+  id: 1,
+  name: "2024 Mahindra XUV700 AX7",
+  price: "₹22.50 Lakh",
+  numericPrice: 2250000,
+  img: "images/xuv1.png",
+  year: "2024",
+  km: "12,000 km",
+  fuel: "Diesel",
+  trans: "Automatic",
+
+  images: [
+    "images/xuv1.png",
+    "images/xuv2.png",
+    "images/xuv3.png",
+    "images/xuv4.png",
+    "images/xuv5.png",
+    "images/xuv6.png",
+    "images/xuv7.png",
+    "images/xuv8.png"
+  ]
+},
       {
         id: 2,
         name: "2024 KIA Seltos GTX Plus",
