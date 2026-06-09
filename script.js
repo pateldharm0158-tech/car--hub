@@ -118,9 +118,10 @@ images: [
       updateEMI();
     }
 
-    function changeImage(src) {
-      document.getElementById('main-image').src = src;
-    }
+   function changeImage(src) {
+  document.getElementById('main-image').src = src;
+  currentImageIndex = currentCar.images.indexOf(src);
+}
     function nextImage() {
   if (!currentCar) return;
 
@@ -155,9 +156,10 @@ function startAutoSlide() {
   }, 3000);
 }
 
-    function closeModal() {
-      document.getElementById('carModal').classList.add('hidden');
-    }
+   function closeModal() {
+  clearInterval(slideInterval);
+  document.getElementById('carModal').classList.add('hidden');
+}
 
     // Fixed & Linked EMI Calculator
     function updateEMI(type = '') {
