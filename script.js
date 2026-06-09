@@ -118,6 +118,7 @@ images: [
       `).join('');
 
       document.getElementById('carModal').classList.remove('hidden');
+        renderRelatedCars(id);
       
       // Reset sliders based on car price
       const price = currentCar.numericPrice;
@@ -360,6 +361,49 @@ function filterCars() {
         </div>
       </div>
     `).join('');
+}
+
+
+function openWarrantyModal(){
+document.getElementById("warrantyModal")
+.classList.remove("hidden");
+}
+
+function closeWarrantyModal(){
+document.getElementById("warrantyModal")
+.classList.add("hidden");
+}
+
+function renderRelatedCars(currentId){
+
+const related =
+cars.filter(car => car.id !== currentId)
+.slice(0,3);
+
+document.getElementById("relatedCars").innerHTML =
+related.map(car => `
+
+<div onclick="openCarModal(${car.id})"
+class="bg-white rounded-3xl shadow-lg overflow-hidden cursor-pointer">
+
+<img src="${car.img}"
+class="w-full h-52 object-cover">
+
+<div class="p-4">
+
+<h3 class="font-bold text-lg">
+${car.name}
+</h3>
+
+<p class="text-red-600 text-2xl font-bold mt-2">
+${car.price}
+</p>
+
+</div>
+
+</div>
+
+`).join('');
 }
 
     
