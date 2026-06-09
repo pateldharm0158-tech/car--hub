@@ -233,18 +233,38 @@ if (type === 'loan') {
       {q: "Can I sell my old car?", a: "Yes, we offer best price for your old car."}
     ];
 
-    function renderFAQ() {
-      const container = document.getElementById('faq-container');
-      container.innerHTML = faqs.map(faq => `
-        <div class="border rounded-2xl p-6">
-          <div class="flex justify-between items-center cursor-pointer" onclick="this.nextElementSibling.classList.toggle('hidden')">
-            <h3 class="font-semibold">${faq.q}</h3>
-            <i class="fa-solid fa-chevron-down"></i>
-          </div>
-          <div class="hidden mt-4 text-gray-600">${faq.a}</div>
-        </div>
-      `).join('');
-    }
+function renderFAQ() {
+
+const container =
+document.getElementById('faq-container');
+
+container.innerHTML = faqs.map(faq => `
+
+<div class="bg-white rounded-3xl shadow-lg overflow-hidden">
+
+<button
+class="w-full flex justify-between items-center p-6 text-left"
+onclick="this.nextElementSibling.classList.toggle('hidden')">
+
+<span class="text-xl font-bold">
+${faq.q}
+</span>
+
+<span class="text-2xl">
++
+</span>
+
+</button>
+
+<div class="hidden px-6 pb-6 text-gray-600 text-lg">
+${faq.a}
+</div>
+
+</div>
+
+`).join('');
+
+}
 function searchCars() {
   const input = document.getElementById("searchInput").value.toLowerCase();
 
