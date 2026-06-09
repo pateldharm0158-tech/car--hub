@@ -93,6 +93,7 @@ images: [
       if (!currentCar) return;
 
       document.getElementById('modal-car-name').textContent = currentCar.name;
+      document.getElementById('car-title-big').textContent = currentCar.name;        
       document.getElementById('modal-price').textContent = currentCar.price;
       document.getElementById('modal-year').textContent = currentCar.year;
       document.getElementById('modal-km').textContent = currentCar.km;
