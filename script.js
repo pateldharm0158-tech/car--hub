@@ -426,6 +426,25 @@ ${car.price}
 `).join('');
 }
 
+
+function shareWebsite() {
+
+if (navigator.share) {
+
+navigator.share({
+title: "ELITECARZ",
+text: "Check out premium cars at ELITECARZ",
+url: window.location.href
+});
+
+} else {
+
+alert("Sharing not supported on this device");
+
+}
+
+}
+
     
     
     window.onload = () => {
