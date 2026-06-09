@@ -123,8 +123,23 @@ required>
       
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-4 md:p-8">        <!-- Image Gallery -->
         <div>
-          <img id="main-image" class="w-full rounded-2xl shadow" alt="">
-          <div class="grid grid-cols-4 gap-3 mt-4" id="thumbnail-grid"></div>
+<div class="relative">
+
+  <img id="main-image"
+       class="w-full rounded-2xl shadow"
+       alt="">
+
+  <button onclick="prevImage()"
+    class="absolute left-3 top-1/2 -translate-y-1/2 bg-white rounded-full shadow px-4 py-2 text-2xl">
+    ❮
+  </button>
+
+  <button onclick="nextImage()"
+    class="absolute right-3 top-1/2 -translate-y-1/2 bg-white rounded-full shadow px-4 py-2 text-2xl">
+    ❯
+  </button>
+
+</div>          <div class="grid grid-cols-4 gap-3 mt-4" id="thumbnail-grid"></div>
         </div>
 
         <!-- Details + EMI -->
