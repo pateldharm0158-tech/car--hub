@@ -107,7 +107,9 @@ images: [
     function openCarModal(id) {
       currentCar = cars.find(c => c.id === id);
       if (!currentCar) return;
-
+        
+      document.querySelector('a[href*="wa.me"]').style.display = "none";
+      document.querySelector('a[href*="tel:"]').style.display = "none"; 
       document.getElementById('modal-car-name').textContent = currentCar.name;
       document.getElementById('modal-price').textContent = currentCar.price;
       document.getElementById("detail-makeyear").textContent = currentCar.makeYear;
@@ -185,9 +187,12 @@ function startAutoSlide() {
 
    function closeModal() {
   clearInterval(slideInterval);
+
+  document.querySelector('a[href*="wa.me"]').style.display = "flex";
+  document.querySelector('a[href*="tel:"]').style.display = "flex";
+
   document.getElementById('carModal').classList.add('hidden');
 }
-
     // Fixed & Linked EMI Calculator
     function updateEMI(type = '') {
       let loanAmount = parseFloat(document.getElementById('loan-amount').value);
