@@ -32,7 +32,7 @@ images: [
   price: "₹16.75 Lakh",
   numericPrice: 1675000,
 
-  img: "virtus/virtus 1.jpeg",
+  img:  "virtus/virtus 9.png",
 
   fuel: "Petrol",
   trans: "Manual",
@@ -45,6 +45,7 @@ images: [
   insurance: "2027",
 
   images: [
+    "virtus/virtus 9.png"
     "virtus/virtus 1.jpeg",
     "virtus/virtus 2.jpeg",
     "virtus/virtus 3.jpeg",
@@ -52,7 +53,6 @@ images: [
     "virtus/virtus 5.jpeg",
     "virtus/virtus 6.jpeg",
     "virtus/virtus 7.png",
-    "virtus/virtus 9.png"
   ]
 },
       {
