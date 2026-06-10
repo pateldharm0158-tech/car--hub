@@ -104,7 +104,7 @@ images: [
   insurance: "2027",
 
   images: [
-    "Skoda Rapid/Skoda Rapid 9.jpeg",
+    "Skoda Rapid/Skoda Rapid 8.jpeg",
     "Skoda Rapid/Skoda Rapid 1.jpeg",
     "Skoda Rapid/Skoda Rapid 2.jpeg",
     "Skoda Rapid/Skoda Rapid 3.jpeg",
@@ -112,7 +112,7 @@ images: [
     "Skoda Rapid/Skoda Rapid 5.png",
     "Skoda Rapid/Skoda Rapid 6.jpeg",
     "Skoda Rapid/Skoda Rapid 7.jpeg",
-    "Skoda Rapid/Skoda Rapid 8.png"
+    "Skoda Rapid/Skoda Rapid 9.png"
   ]
 },
     ];
