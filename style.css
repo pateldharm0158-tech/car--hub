@@ -30,3 +30,37 @@ transform:scale(1.1);
 .wishlist-btn:active{
 transform:scale(0.9);
 }
+@media (max-width: 768px){
+
+  #carModal .grid{
+    grid-template-columns: 1fr !important;
+  }
+
+  #carModal{
+    padding: 5px;
+  }
+
+  #carModal .modal{
+    width: 100%;
+    max-height: 100vh;
+    overflow-y: auto;
+  }
+
+  #carModal h2{
+    font-size: 1.5rem;
+  }
+
+  #carModal .text-4xl{
+    font-size: 2rem !important;
+  }
+
+  #carModal .grid-cols-2,
+  #carModal .grid-cols-3{
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  #carModal button{
+    width: 100%;
+  }
+
+}
