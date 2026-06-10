@@ -324,7 +324,37 @@ images: [
     "alcazar 2023/alcazar 8.jpeg",
     "alcazar 2023/alcazar 9.png"
   ]
-}
+},
+    {
+  id: 12,
+  name: "2020 Hyundai Verna",
+  price: "₹10.95 Lakh",
+  numericPrice: 1095000,
+
+  img: "verna 2020/verna 1.png",
+
+  fuel: "Petrol",
+  trans: "Automatic",
+
+  makeYear: "2020",
+  registrationYear: "2020",
+  ownership: "1st",
+  driven: "42,000 KM",
+  rto: "GJ",
+  insurance: "2027",
+
+  images: [
+    "verna 2020/verna 1.png",
+    "verna 2020/verna 2.png",
+    "verna 2020/verna 3.png",
+    "verna 2020/verna 4.png",
+    "verna 2020/verna 5.png",
+    "verna 2020/verna 6.png",
+    "verna 2020/verna 7.png",
+    "verna 2020/verna 8.png"
+  ]
+},
+    
     
     ];
 
