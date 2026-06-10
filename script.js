@@ -115,6 +115,38 @@ images: [
     "Skoda Rapid/Skoda Rapid 9.jpeg"
   ]
 },
+    {
+  id: 5,
+  name: "2019 Maruti Suzuki Dzire",
+  price: "₹6.50 Lakh",
+  numericPrice: 650000,
+
+  img: "Maruti Suzuki Dzire/Maruti Suzuki Dzire 9.png",
+
+  fuel: "Petrol",
+  trans: "Manual",
+
+  makeYear: "2019",
+  registrationYear: "2019",
+  ownership: "1st",
+  driven: "55,000 KM",
+  rto: "GJ",
+  insurance: "2027",
+
+  images: [
+    "Maruti Suzuki Dzire/Maruti Suzuki Dzire 9.png",
+    "Maruti Suzuki Dzire/Maruti Suzuki Dzire 1.jpeg",
+    "Maruti Suzuki Dzire/Maruti Suzuki Dzire 2.jpeg",
+    "Maruti Suzuki Dzire/Maruti Suzuki Dzire 3.jpeg",
+    "Maruti Suzuki Dzire/Maruti Suzuki Dzire 4.jpeg",
+    "Maruti Suzuki Dzire/Maruti Suzuki Dzire 5.jpeg",
+    "Maruti Suzuki Dzire/Maruti Suzuki Dzire 6.jpeg",
+    "Maruti Suzuki Dzire/Maruti Suzuki Dzire 7.jpeg",
+    "Maruti Suzuki Dzire/Maruti Suzuki Dzire 8.png"
+  ]
+}
+
+    
     ];
 
     function renderCars() {
