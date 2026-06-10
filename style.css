@@ -77,3 +77,18 @@ transform:scale(0.9);
   }
 
 }
+@media (max-width:768px){
+
+  #carModal .grid-cols-2{
+    grid-template-columns:1fr !important;
+  }
+
+  #carModal .grid-cols-3{
+    grid-template-columns:1fr !important;
+  }
+
+  #relatedCars{
+    grid-template-columns:1fr !important;
+  }
+
+}
