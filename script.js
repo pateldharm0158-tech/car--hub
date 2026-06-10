@@ -354,6 +354,95 @@ images: [
     "verna 2020/verna 8.png"
   ]
 },
+    {
+  id: 13,
+  name: "2024 Hyundai i20 Sportz IVT",
+  price: "₹8.95 Lakh",
+  numericPrice: 895000,
+
+  img: "i20/i20 1.png",
+
+  fuel: "Petrol",
+  trans: "Automatic",
+
+  makeYear: "2024",
+  registrationYear: "2024",
+  ownership: "1st",
+  driven: "10,000 KM",
+  rto: "GJ",
+  insurance: "2027",
+
+  images: [
+    "i20 2025/i20 1.png",
+    "i20 2025/i20 2.png",
+    "i20 2025/i20 3.png",
+    "i20 2025/i20 4.png",
+    "i20 2025/i20 5.png",
+    "i20 2025/i20 6.png",
+    "i20 2025/i20 7.png"
+  ]
+},
+    {
+  id: 14,
+  name: "2018 Volkswagen Polo",
+  price: "₹5.95 Lakh",
+  numericPrice: 595000,
+
+  img: "polo 2018/polo 1.png",
+
+  fuel: "Petrol",
+  trans: "Manual",
+
+  makeYear: "2018",
+  registrationYear: "2018",
+  ownership: "1st",
+  driven: "65,000 KM",
+  rto: "GJ",
+  insurance: "2027",
+
+  images: [
+    "polo 2018/polo 1.png",
+    "polo 2018/polo 2.png",
+    "polo 2018/polo 3.png",
+    "polo 2018/polo 4.png",
+    "polo 2018/polo 5.png",
+    "polo 2018/polo 6.png",
+    "polo 2018/polo 7.png",
+    "polo 2018/polo 8.jpeg"
+  ]
+},
+    {
+  id: 15,
+  name: "2021 Tata Harrier XM",
+  price: "₹13.95 Lakh",
+  numericPrice: 1395000,
+
+  img: "harrier 2021/harrier 1.png",
+
+  fuel: "Diesel",
+  trans: "Manual",
+
+  makeYear: "2021",
+  registrationYear: "2021",
+  ownership: "1st",
+  driven: "48,000 KM",
+  rto: "GJ",
+  insurance: "2027",
+
+  images: [
+    "harrier 2021/harrier 1.png",
+    "harrier 2021/harrier 2.png",
+    "harrier 2021/harrier 3.png",
+    "harrier 2021/harrier 4.png",
+    "harrier 2021/harrier 5.png",
+    "harrier 2021/harrier 6.png",
+    "harrier 2021/harrier 7.png",
+    "harrier 2021/harrier 8.png",
+    "harrier 2021/harrier 9.png"
+  ]
+}
+    
+    
     
     
     ];
