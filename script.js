@@ -204,8 +204,127 @@ images: [
     "honda City/Honda City8.jpeg",
     "honda City/Honda City9.png"
   ]
-}
+},
+    {
+  id: 8,
+  name: "2020 Ford Endeavour",
+  price: "₹24.95 Lakh",
+  numericPrice: 2495000,
 
+  img: "endeavour 2020/endeavour 7.png",
+
+  fuel: "Diesel",
+  trans: "Manual",
+
+  makeYear: "2020",
+  registrationYear: "2020",
+  ownership: "1st",
+  driven: "58,000 KM",
+  rto: "GJ",
+  insurance: "2027",
+
+  images: [
+    "endeavour 2020/endeavour 1.jpeg",
+    "endeavour 2020/endeavour 2.jpeg",
+    "endeavour 2020/endeavour 3.jpeg",
+    "endeavour 2020/endeavour 4.png",
+    "endeavour 2020/endeavour 5.jpeg",
+    "endeavour 2020/endeavour 6.jpeg",
+    "endeavour 2020/endeavour 7.png",
+    "endeavour 2020/endeavour 8.jpeg",
+    "endeavour 2020/endeavour 9.jpeg"
+  ]
+},
+    {
+  id: 9,
+  name: "2022 Maruti Suzuki Ertiga",
+  price: "₹9.50 Lakh",
+  numericPrice: 950000,
+
+  img: "eartiga 2022/eartiga 4.png",
+
+  fuel: "Petrol",
+  trans: "Manual",
+
+  makeYear: "2022",
+  registrationYear: "2022",
+  ownership: "1st",
+  driven: "38,000 KM",
+  rto: "GJ",
+  insurance: "2027",
+
+  images: [
+    "eartiga 2022/eartiga 1.png",
+    "eartiga 2022/eartiga 2.png",
+    "eartiga 2022/eartiga 3.png",
+    "eartiga 2022/eartiga 4.png",
+    "eartiga 2022/eartiga 5.png",
+    "eartiga 2022/eartiga 6.png",
+    "eartiga 2022/eartiga 7.png",
+    "eartiga 2022/eartiga 8.png",
+    "eartiga 2022/eartiga 9.png"
+  ]
+},
+{
+  id: 10,
+  name: "2019 BMW 520d",
+  price: "₹32.95 Lakh",
+  numericPrice: 3295000,
+
+  img: "Bmwv5/Bmwv5-4.png",
+
+  fuel: "Diesel",
+  trans: "Manual",
+
+  makeYear: "2019",
+  registrationYear: "2019",
+  ownership: "1st",
+  driven: "52,000 KM",
+  rto: "GJ",
+  insurance: "2027",
+
+  images: [
+    "Bmwv5/Bmwv5-1.jpeg",
+    "Bmwv5/Bmwv5-2.jpeg",
+    "Bmwv5/Bmwv5-3.jpeg",
+    "Bmwv5/Bmwv5-4.png",
+    "Bmwv5/Bmwv5-5.jpeg",
+    "Bmwv5/Bmwv5-6.jpeg",
+    "Bmwv5/Bmwv5-7.jpeg",
+    "Bmwv5/Bmwv5-8.jpeg",
+    "Bmwv5/Bmwv5-9.png"
+  ]
+},
+    {
+  id: 11,
+  name: "2023 Hyundai Alcazar",
+  price: "₹18.95 Lakh",
+  numericPrice: 1895000,
+
+  img: "alcazar 2023/alcazar 9.png",
+
+  fuel: "Diesel",
+  trans: "Manual",
+
+  makeYear: "2023",
+  registrationYear: "2023",
+  ownership: "1st",
+  driven: "22,000 KM",
+  rto: "GJ",
+  insurance: "2028",
+
+  images: [
+    "alcazar 2023/alcazar 1.jpeg",
+    "alcazar 2023/alcazar 2.png",
+    "alcazar 2023/alcazar 3.jpeg",
+    "alcazar 2023/alcazar 4.jpeg",
+    "alcazar 2023/alcazar 5.jpeg",
+    "alcazar 2023/alcazar 6.jpeg",
+    "alcazar 2023/alcazar 7.jpeg",
+    "alcazar 2023/alcazar 8.jpeg",
+    "alcazar 2023/alcazar 9.png"
+  ]
+}
     
     ];
 
