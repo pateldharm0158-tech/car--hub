@@ -841,7 +841,18 @@ ${car.price}
 
 `).join('');
 }
-
+function shareWebsite() {
+  if (navigator.share) {
+    navigator.share({
+      title: "Magneto Carsz",
+      text: "Check out premium pre-owned cars at Magneto Carsz",
+      url: window.location.href
+    });
+  } else {
+    navigator.clipboard.writeText(window.location.href);
+    alert("Website link copied!");
+  }
+}
     
     
     window.onload = () => {
