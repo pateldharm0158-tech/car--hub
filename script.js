@@ -55,30 +55,66 @@ images: [
     "virtus/virtus 7.png",
   ]
 },
-      {
-        id: 3,
-        name: "2022 Mercedes-Benz GLC 300",
-        price: "₹28.50 Lakh",
-        numericPrice: 2850000,
-        img: "https://picsum.photos/id/201/800/500",
-        year: "2022",
-        km: "22,000 km",
-        fuel: "Petrol",
-        trans: "Automatic",
-        images: ["https://picsum.photos/id/201/800/500"]
-      },
-      {
-        id: 4,
-        name: "2023 BMW X3 xDrive30d",
-        price: "₹32.50 Lakh",
-        numericPrice: 3250000,
-        img: "https://picsum.photos/id/251/800/500",
-        year: "2023",
-        km: "15,000 km",
-        fuel: "Diesel",
-        trans: "Automatic",
-        images: ["https://picsum.photos/id/251/800/500"]
-      }
+     {
+  id: 3,
+  name: "2023 Renault Triber RXZ",
+  price: "₹6.95 Lakh",
+  numericPrice: 695000,
+
+  img: "triber 2023/triber 9.png",
+
+  fuel: "Petrol",
+  trans: "Manual",
+
+  makeYear: "2023",
+  registrationYear: "2023",
+  ownership: "1st",
+  driven: "35,000 KM",
+  rto: "GJ",
+  insurance: "2027",
+
+  images: [
+    "triber 2023/triber 9.png",
+    "triber 2023/triber 1.png",
+    "triber 2023/triber 2.png",
+    "triber 2023/triber 3.png",
+    "triber 2023/triber 4.png",
+    "triber 2023/triber 5.png",
+    "triber 2023/triber 6.png",
+    "triber 2023/triber 7.png",
+    "triber 2023/triber 8.png"
+  ]
+},
+     {
+  id: 4,
+  name: "2022 Skoda Rapid",
+  price: "₹8.95 Lakh",
+  numericPrice: 895000,
+
+  img: "Skoda Rapid/Skoda Rapid 9.jpeg",
+
+  fuel: "Petrol",
+  trans: "Manual",
+
+  makeYear: "2022",
+  registrationYear: "2022",
+  ownership: "1st",
+  driven: "42,000 KM",
+  rto: "GJ",
+  insurance: "2027",
+
+  images: [
+    "Skoda Rapid/Skoda Rapid 9.jpeg",
+    "Skoda Rapid/Skoda Rapid 1.jpeg",
+    "Skoda Rapid/Skoda Rapid 2.jpeg",
+    "Skoda Rapid/Skoda Rapid 3.jpeg",
+    "Skoda Rapid/Skoda Rapid 4.jpeg",
+    "Skoda Rapid/Skoda Rapid 5.png",
+    "Skoda Rapid/Skoda Rapid 6.jpeg",
+    "Skoda Rapid/Skoda Rapid 7.jpeg",
+    "Skoda Rapid/Skoda Rapid 8.png"
+  ]
+},
     ];
 
     function renderCars() {
