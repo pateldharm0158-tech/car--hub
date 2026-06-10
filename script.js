@@ -45,7 +45,7 @@ images: [
   insurance: "2027",
 
   images: [
-    "virtus/virtus 9.png"
+    "virtus/virtus 9.png",
     "virtus/virtus 1.jpeg",
     "virtus/virtus 2.jpeg",
     "virtus/virtus 3.jpeg",
