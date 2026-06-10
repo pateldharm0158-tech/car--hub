@@ -360,7 +360,7 @@ images: [
   price: "₹8.95 Lakh",
   numericPrice: 895000,
 
-  img: "i20/i20 1.png",
+  img: "i20 2025/i20 1.png",
 
   fuel: "Petrol",
   trans: "Automatic",
@@ -377,9 +377,9 @@ images: [
     "i20 2025/i20 2.png",
     "i20 2025/i20 3.png",
     "i20 2025/i20 4.png",
-    "i20 2025/i20 5.png",
     "i20 2025/i20 6.png",
-    "i20 2025/i20 7.png"
+    "i20 2025/i20 7.png",
+    "i20 2025/i20 8.png"
   ]
 },
     {
