@@ -45,14 +45,14 @@ images: [
   insurance: "2027",
 
   images: [
-    "virtus/virtus1.jpeg",
-    "virtus/virtus2.jpeg",
-    "virtus/virtus3.jpeg",
-    "virtus/virtus4.jpeg",
-    "virtus/virtus5.jpeg",
-    "virtus/virtus6.jpeg",
-    "virtus/virtus7.png",
-    "virtus/virtus9.png"
+    "virtus/virtus 1.jpeg",
+    "virtus/virtus 2.jpeg",
+    "virtus/virtus 3.jpeg",
+    "virtus/virtus 4.jpeg",
+    "virtus/virtus 5.jpeg",
+    "virtus/virtus 6.jpeg",
+    "virtus/virtus 7.png",
+    "virtus/virtus 9.png"
   ]
 },
       {
