@@ -64,3 +64,16 @@ transform:scale(0.9);
   }
 
 }
+@media (max-width:768px){
+
+  #modalGrid{
+    display:block !important;
+  }
+
+  #carModal .modal{
+    width:100vw !important;
+    max-width:100vw !important;
+    border-radius:0 !important;
+  }
+
+}
