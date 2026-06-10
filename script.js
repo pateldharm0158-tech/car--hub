@@ -144,6 +144,36 @@ images: [
     "Maruti Suzuki Dzire/Maruti Suzuki Dzire 7.jpeg",
     "Maruti Suzuki Dzire/Maruti Suzuki Dzire 8.png"
   ]
+},
+    {
+  id: 6,
+  name: "2017 Toyota Innova Crysta",
+  price: "₹12.95 Lakh",
+  numericPrice: 1295000,
+
+  img: "innova crysta 2017/innova-2.png",
+
+  fuel: "Diesel",
+      
+  trans: "Manual",
+
+  makeYear: "2017",
+  registrationYear: "2017",
+  ownership: "1st",
+  driven: "85,000 KM",
+  rto: "GJ",
+  insurance: "2027",
+
+  images: [
+    "innova crysta 2017/innova-2.png",
+    "innova crysta 2017/innova-1.png",
+    "innova crysta 2017/innova-3.png",
+    "innova crysta 2017/innova-4.jpeg",
+    "innova crysta 2017/innova-5.jpeg",
+    "innova crysta 2017/innova-6.jpeg",
+    "innova crysta 2017/innova-7.jpeg",
+    "innova crysta 2017/innova-8.jpeg"
+  ]
 }
 
     
