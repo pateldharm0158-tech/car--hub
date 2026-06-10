@@ -92,3 +92,15 @@ transform:scale(0.9);
   }
 
 }
+#car-grid{
+  scrollbar-width:none;
+}
+
+#car-grid::-webkit-scrollbar{
+  display:none;
+}
+
+#car-grid .car-card{
+  min-width:320px;
+  flex-shrink:0;
+}
