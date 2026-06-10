@@ -174,6 +174,36 @@ images: [
     "innova crysta 2017/innova-7.jpeg",
     "innova crysta 2017/innova-8.jpeg"
   ]
+},
+    {
+  id: 7,
+  name: "2020 Honda City",
+  price: "₹8.95 Lakh",
+  numericPrice: 895000,
+
+  img: "honda City/Honda City7.png",
+
+  fuel: "Petrol",
+  trans: "Manual",
+
+  makeYear: "2020",
+  registrationYear: "2020",
+  ownership: "1st",
+  driven: "45,000 KM",
+  rto: "GJ",
+  insurance: "2027",
+
+  images: [
+    "honda City/Honda City1.jpeg",
+    "honda City/Honda City2.jpeg",
+    "honda City/Honda City3.jpeg",
+    "honda City/Honda City4.jpeg",
+    "honda City/Honda City5.jpeg",
+    "honda City/Honda City6.jpeg",
+    "honda City/Honda City7.png",
+    "honda City/Honda City8.jpeg",
+    "honda City/Honda City9.png"
+  ]
 }
 
     
