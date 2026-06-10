@@ -154,15 +154,48 @@ images: [
       grid.innerHTML = cars.map(car => `
         <div onclick="openCarModal(${car.id})" class="car-card bg-white rounded-3xl overflow-hidden cursor-pointer">
 <img src="${car.img}" class="w-full h-48 sm:h-56 object-cover">         
-           <div class="p-6">
-  <h3 class="font-bold text-lg">${car.name}</h3>
-  <p class="text-red-600 text-2xl font-semibold mt-2">${car.price}</p>
+           <div class="p-4">
 
-  <button
-    onclick="event.stopPropagation(); addToWishlist(${car.id})"
-    class="mt-3 bg-red-600 text-white px-4 py-2 rounded-lg wishlist-btn">
-    ❤️ Wishlist
-  </button>
+<h3 class="font-bold text-lg mb-3">
+${car.name}
+</h3>
+
+<div class="grid grid-cols-3 gap-2 mb-4">
+
+<div class="bg-gray-100 text-center py-2 rounded-lg text-sm">
+${car.fuel}
+</div>
+
+<div class="bg-gray-100 text-center py-2 rounded-lg text-sm">
+${car.trans}
+</div>
+
+<div class="bg-gray-100 text-center py-2 rounded-lg text-sm">
+${car.rto}
+</div>
+
+</div>
+
+<div class="flex justify-between items-center">
+
+<div>
+<p class="text-red-600 text-3xl font-bold">
+${car.price}
+</p>
+</div>
+
+<div class="text-sm font-semibold">
+EMI: ₹${Math.round(car.numericPrice/120).toLocaleString('en-IN')}/m
+</div>
+
+</div>
+
+<button
+onclick="event.stopPropagation(); addToWishlist(${car.id})"
+class="mt-4 bg-red-600 text-white px-4 py-2 rounded-lg wishlist-btn">
+❤️ Wishlist
+</button>
+
 </div>
         </div>
       `).join('');
