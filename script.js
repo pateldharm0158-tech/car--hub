@@ -105,7 +105,7 @@ images: [
 
   images: [
     "Skoda Rapid/Skoda Rapid 8.png",
-    "Skoda Rapid/Skoda Rapid 1.jpeg",
+    "Skoda Rapid/Skoda Rapid 1 .jpeg",
     "Skoda Rapid/Skoda Rapid 2.jpeg",
     "Skoda Rapid/Skoda Rapid 3.jpeg",
     "Skoda Rapid/Skoda Rapid 4.jpeg",
