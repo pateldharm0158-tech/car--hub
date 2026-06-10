@@ -27,17 +27,34 @@ images: [
 ]
 },
       {
-        id: 2,
-        name: "2024 KIA Seltos GTX Plus",
-        price: "₹16.75 Lakh",
-        numericPrice: 1675000,
-        img: "https://picsum.photos/id/1074/800/500",
-        year: "2024",
-        km: "8,500 km",
-        fuel: "Diesel",
-        trans: "Automatic",
-        images: ["https://picsum.photos/id/1074/800/500","https://picsum.photos/id/1075/800/500"]
-      },
+  id: 2,
+  name: "2024 Volkswagen Virtus GT",
+  price: "₹16.75 Lakh",
+  numericPrice: 1675000,
+
+  img: "virtus/virtus1.jpeg",
+
+  fuel: "Petrol",
+  trans: "Manual",
+
+  makeYear: "2024",
+  registrationYear: "2024",
+  ownership: "1st",
+  driven: "8,500 KM",
+  rto: "GJ",
+  insurance: "2027",
+
+  images: [
+    "virtus/virtus1.jpeg",
+    "virtus/virtus2.jpeg",
+    "virtus/virtus3.jpeg",
+    "virtus/virtus4.jpeg",
+    "virtus/virtus5.jpeg",
+    "virtus/virtus6.jpeg",
+    "virtus/virtus7.png",
+    "virtus/virtus9.png"
+  ]
+},
       {
         id: 3,
         name: "2022 Mercedes-Benz GLC 300",
