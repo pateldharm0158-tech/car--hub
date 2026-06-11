@@ -182,3 +182,18 @@ transform:scale(0.9);
   }
 
 }
+@media (max-width:768px){
+
+  .benefits-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+  }
+
+  .benefits-grid div:nth-child(3){
+    grid-column:1 / span 2;
+    justify-self:center;
+    max-width:150px;
+  }
+
+}
