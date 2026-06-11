@@ -45,6 +45,36 @@
   </div>
 
 </div>
+
+  <script>
+window.onload = function(){
+
+const params = new URLSearchParams(window.location.search);
+
+const carId = Number(params.get("id"));
+
+const car = cars.find(c => c.id === carId);
+
+if(!car) return;
+
+document.getElementById("main-image").src =
+car.images[0];
+
+document.getElementById("car-name").textContent =
+car.name;
+
+document.getElementById("car-price").textContent =
+car.price;
+
+document.getElementById("thumbnail-grid").innerHTML =
+car.images.map(img => `
+<img src="${img}"
+class="w-24 h-20 object-cover rounded-xl cursor-pointer"
+onclick="document.getElementById('main-image').src='${img}'">
+`).join('');
+
+}
+</script>
 <script src="script.js"></script>
 
 </body>
