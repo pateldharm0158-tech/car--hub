@@ -14,10 +14,16 @@
   <header class="bg-white shadow sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
       <div class="text-3xl font-bold">Magneto Carsz</div>
-<div class="hidden md:flex gap-8 text-sm font-medium">     
-        <a href="sell-car.html">Sell a Car</a>
+<div class="hidden md:flex gap-8 text-sm font-medium">
+  <a href="sell-car.html" class="hover:text-red-600">Sell a Car</a>
   <a href="#contact" class="hover:text-red-600">Contact us</a>
-      </div>
+</div>
+
+<button
+class="md:hidden text-2xl"
+onclick="toggleMenu()">
+☰
+</button>
   <div class="flex gap-5 text-xl items-center">
 
   <i class="fa-solid fa-magnifying-glass cursor-pointer"
@@ -29,6 +35,23 @@ onclick="showWishlist()"></i>
 </div>
     </div>
   </header>
+
+<div id="mobileMenu"
+class="hidden md:hidden bg-white shadow-lg">
+
+  <a href="sell-car.html"
+  class="block px-6 py-4 border-b">
+  Sell a Car
+  </a>
+
+  <a href="#contact"
+  class="block px-6 py-4">
+  Contact Us
+  </a>
+
+</div>
+
+  
 
   <!-- Hero -->
 <section class="hero-bg min-h-screen flex items-center">
