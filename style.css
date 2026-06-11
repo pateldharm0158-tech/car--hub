@@ -77,19 +77,6 @@ transform:scale(0.9);
   }
 
 }
-
-#car-grid{
-  scrollbar-width:none;
-}
-
-#car-grid::-webkit-scrollbar{
-  display:none;
-}
-
-#car-grid .car-card{
-  min-width:320px;
-  flex-shrink:0;
-}
 @media (max-width:768px){
 
   #carModal .grid-cols-2{
@@ -105,15 +92,15 @@ transform:scale(0.9);
   }
 
 }
-#relatedCars{
+#car-grid{
   scrollbar-width:none;
 }
 
-#relatedCars::-webkit-scrollbar{
+#car-grid::-webkit-scrollbar{
   display:none;
 }
 
-#relatedCars > div{
+#car-grid .car-card{
   min-width:320px;
   flex-shrink:0;
 }
