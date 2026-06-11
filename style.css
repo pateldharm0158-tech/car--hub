@@ -103,3 +103,16 @@ transform:scale(0.9);
   }
 
 }
+
+#relatedCars{
+  scrollbar-width:none;
+}
+
+#relatedCars::-webkit-scrollbar{
+  display:none;
+}
+
+#relatedCars > div{
+  min-width:320px;
+  flex-shrink:0;
+}
