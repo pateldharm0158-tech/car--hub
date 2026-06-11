@@ -450,7 +450,8 @@ images: [
     function renderCars() {
       const grid = document.getElementById('car-grid');
       grid.innerHTML = cars.map(car => `
-        <div onclick="openCarModal(${car.id})" class="car-card bg-white rounded-3xl overflow-hidden cursor-pointer">
+<div onclick="window.location.href='car-details.html?id=${car.id}'"
+class="car-card bg-white rounded-3xl overflow-hidden cursor-pointer">
 <img src="${car.img}" class="w-full h-48 sm:h-56 object-cover">         
            <div class="p-4">
 
