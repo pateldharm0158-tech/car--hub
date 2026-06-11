@@ -820,7 +820,7 @@ document.getElementById("relatedCars").innerHTML =
 related.map(car => `
 
 <div onclick="openCarModal(${car.id})"
-class="bg-white rounded-3xl shadow-lg overflow-hidden cursor-pointer min-w-[320px] flex-shrink-0"
+class="bg-white rounded-3xl shadow-lg overflow-hidden cursor-pointer">
 
 <img src="${car.img}"
 class="w-full h-52 object-cover">
