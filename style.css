@@ -32,9 +32,7 @@ transform:scale(0.9);
 }
 @media (max-width: 768px){
 
-  #carModal .grid{
-    grid-template-columns: repeat(3,1fr) !important;
-  }
+ 
 
   #carModal{
     padding: 5px;
@@ -55,7 +53,7 @@ transform:scale(0.9);
   }
 
  #carModal .grid-cols-2{
-  grid-template-columns:1fr 1fr !important;
+  grid-template-columns:repeat(2,1fr) !important;
 }
 
 #carModal .grid-cols-3{
@@ -164,6 +162,14 @@ transform:scale(0.9);
 
 }
 @media (max-width:768px){
+
+  #relatedCars{
+    grid-template-columns:1fr !important;
+  }
+
+  #carModal .bg-black .grid{
+    grid-template-columns:1fr !important;
+  }
 
   #carModal .min-w-\[260px\]{
     min-width:100% !important;
