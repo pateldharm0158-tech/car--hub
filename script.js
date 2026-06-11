@@ -860,3 +860,10 @@ function shareWebsite() {
       renderCars();
       renderFAQ();
     };
+function toggleMenu(){
+
+document
+.getElementById("mobileMenu")
+.classList.toggle("hidden");
+
+}
