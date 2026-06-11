@@ -33,7 +33,7 @@ transform:scale(0.9);
 @media (max-width: 768px){
 
   #carModal .grid{
-    grid-template-columns: 1fr !important;
+    grid-template-columns: repeat(3,1fr) !important;
   }
 
   #carModal{
@@ -77,21 +77,7 @@ transform:scale(0.9);
   }
 
 }
-@media (max-width:768px){
 
-  #carModal .grid-cols-2{
-    grid-template-columns:1fr !important;
-  }
-
-  #carModal .grid-cols-3{
-    grid-template-columns:1fr !important;
-  }
-
-  #relatedCars{
-    grid-template-columns:1fr !important;
-  }
-
-}
 #car-grid{
   scrollbar-width:none;
 }
@@ -152,6 +138,23 @@ transform:scale(0.9);
   #thumbnail-grid img{
     width:90px;
     height:70px;
+  }
+
+}
+@media (max-width:768px){
+
+  #carModal .grid-cols-3{
+    display:grid !important;
+    grid-template-columns:repeat(3,1fr) !important;
+    gap:15px !important;
+  }
+
+  #carModal .grid-cols-3 h3{
+    font-size:1.8rem !important;
+  }
+
+  #carModal .grid-cols-3 p{
+    font-size:14px !important;
   }
 
 }
