@@ -32,10 +32,7 @@ transform:scale(0.9);
 }
 @media (max-width: 768px){
 
-  #carModal .grid{
-    grid-template-columns: repeat(3,1fr) !important;
-  }
-
+ 
   #carModal{
     padding: 5px;
   }
@@ -54,11 +51,13 @@ transform:scale(0.9);
     font-size: 2rem !important;
   }
 
-  #carModal .grid-cols-2,
-  #carModal .grid-cols-3{
-    grid-template-columns: 1fr 1fr !important;
-  }
+  #carModal .grid-cols-2{
+  grid-template-columns:1fr !important;
+}
 
+#carModal .grid-cols-3{
+  grid-template-columns:repeat(3,1fr) !important;
+}
   #carModal button{
     width: 100%;
   }
@@ -67,7 +66,8 @@ transform:scale(0.9);
 @media (max-width:768px){
 
   #modalGrid{
-    display:block !important;
+   display:grid !important;
+grid-template-columns:1fr !important;
   }
 
   #carModal .modal{
@@ -87,7 +87,7 @@ transform:scale(0.9);
 }
 
 #car-grid .car-card{
-  min-width:320px;
+  min-width:280px;
   flex-shrink:0;
 }
 /* EliteCar Layout */
@@ -145,16 +145,32 @@ transform:scale(0.9);
 
   #carModal .grid-cols-3{
     display:grid !important;
-    grid-template-columns:repeat(3,1fr) !important;
-    gap:15px !important;
+    grid-template-columns:repeat(2,1fr) !important;
+    gap:12px !important;
   }
 
   #carModal .grid-cols-3 h3{
-    font-size:1.8rem !important;
+    font-size:1.2rem !important;
   }
 
   #carModal .grid-cols-3 p{
-    font-size:14px !important;
+    font-size:12px !important;
   }
 
 }
+@media(max-width:768px){
+
+  #carModal .modal{
+    padding-bottom:30px;
+  }
+
+  #relatedCars{
+    grid-template-columns:1fr !important;
+  }
+
+  #relatedCars .car-card{
+    min-width:100% !important;
+  }
+
+}
+
