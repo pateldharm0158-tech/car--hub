@@ -12,7 +12,6 @@
 
 <body class="bg-gray-100">
 
-<div id="carDetailsPage">
 <div id="carDetailsPage" class="max-w-7xl mx-auto p-6">
 
   <div class="grid lg:grid-cols-3 gap-6">
@@ -46,8 +45,10 @@
 
 </div>
 
+
+<script src="script.js"></script>
   <script>
-window.onload = function(){
+window.addEventListener("load", function(){
 
 const params = new URLSearchParams(window.location.search);
 
@@ -55,16 +56,16 @@ const carId = Number(params.get("id"));
 
 const car = cars.find(c => c.id === carId);
 
-if(!car) return;
+if(!car){
+alert("Car not found");
+return;
+}
 
-document.getElementById("main-image").src =
-car.images[0];
+document.getElementById("main-image").src = car.images[0];
 
-document.getElementById("car-name").textContent =
-car.name;
+document.getElementById("car-name").textContent = car.name;
 
-document.getElementById("car-price").textContent =
-car.price;
+document.getElementById("car-price").textContent = car.price;
 
 document.getElementById("thumbnail-grid").innerHTML =
 car.images.map(img => `
@@ -73,9 +74,8 @@ class="w-24 h-20 object-cover rounded-xl cursor-pointer"
 onclick="document.getElementById('main-image').src='${img}'">
 `).join('');
 
-}
+});
 </script>
-<script src="script.js"></script>
 
 </body>
 </html>
