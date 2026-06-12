@@ -19,6 +19,7 @@ Admin Panel
 
 <input id="price" placeholder="Price" class="border p-3 w-full mb-3 rounded">
 
+  <input id="fuel" placeholder="Fuel" class="border p-3 w-full mb-3 rounded">
 
 <input id="trans" placeholder="Transmission" class="border p-3 w-full mb-3 rounded">
 
@@ -86,6 +87,7 @@ carList.innerHTML += `
 <h3 class="text-xl font-bold">${data.carName}</h3>
 
 <p>Price: ${data.price}</p>
+<p>Fuel: ${data.fuel}</p>
 <p>Transmission: ${data.trans}</p>
 <p>Color: ${data.color}</p>
 
@@ -109,6 +111,7 @@ await addDoc(collection(db,"cars"),{
 
 carName: document.getElementById("carName").value,
 price: document.getElementById("price").value,
+fuel: document.getElementById("fuel").value,
 trans: document.getElementById("trans").value,
 makeYear: document.getElementById("makeYear").value,
 registrationYear: document.getElementById("registrationYear").value,
