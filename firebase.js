@@ -27,7 +27,7 @@ const firebaseConfig = {
   projectId: "magneto-carsz",
   storageBucket: "magneto-carsz.firebasestorage.app",
   messagingSenderId: "574864338115",
-  appId: "1:574864338115:web:746c18191385c7b32b3c676",
+  appId: "1:574864338115:web:74c61891385c7b32b3c676",
   measurementId: "G-11LMTCNM8P"
 };
 
