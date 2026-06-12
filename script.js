@@ -448,7 +448,25 @@ function shareWebsite() {
     alert("Website link copied!");
   }
 }
-    
+
+window.openCarModal = openCarModal;
+window.addToWishlist = addToWishlist;
+window.closeModal = closeModal;
+window.showWishlist = showWishlist;
+window.closeWishlist = closeWishlist;
+window.openSearch = openSearch;
+window.closeSearch = closeSearch;
+window.filterCars = filterCars;
+window.changeImage = changeImage;
+window.nextImage = nextImage;
+window.prevImage = prevImage;
+window.callNow = callNow;
+window.bookNow = bookNow;
+window.toggleMenu = toggleMenu;
+
+
+
+
     
 window.onload = async () => {
   await loadCarsFromFirestore();
