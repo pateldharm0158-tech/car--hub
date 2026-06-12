@@ -1,1 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin Panel - Magneto Carsz</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
 
+<body class="bg-gray-100">
+
+<div class="max-w-4xl mx-auto p-6">
+
+<h1 class="text-4xl font-bold mb-6">
+Admin Panel
+</h1>
+
+<div class="bg-white p-6 rounded-xl shadow">
+
+<input id="carName" placeholder="Car Name"
+class="border p-3 w-full mb-3 rounded">
+
+<input id="price" placeholder="Price"
+class="border p-3 w-full mb-3 rounded">
+
+<input id="year" placeholder="Year"
+class="border p-3 w-full mb-3 rounded">
+
+<input id="fuel" placeholder="Fuel"
+class="border p-3 w-full mb-3 rounded">
+
+<input id="image" placeholder="Image Path"
+class="border p-3 w-full mb-3 rounded">
+
+<button id="addCar"
+class="bg-red-600 text-white px-6 py-3 rounded">
+Add Car
+</button>
+
+</div>
+
+<h2 class="text-2xl font-bold mt-8 mb-4">
+All Cars
+</h2>
+
+<div id="carList"></div>
+
+</div>
+
+<script type="module">
+
+import {
+db,
+collection,
+addDoc,
+getDocs,
+deleteDoc,
+doc
+} from "./firebase.js";
+
+const addBtn = document.getElementById("addCar");
+const carList = document.getElementById("carList");
+
+async function loadCars(){
+
+carList.innerHTML="";
+
+const querySnapshot = await getDocs(collection(db,"cars"));
+
+querySnapshot.forEach((car)=>{
+
+const data = car.data();
+
+carList.innerHTML += `
+<div class="bg-white p-4 rounded shadow mb-3">
+
+<h3 class="text-xl font-bold">${data.carName}</h3>
+
+<p>${data.price}</p>
+
+<p>${data.year}</p>
+
+<p>${data.fuel}</p>
+
+<button onclick="deleteCar('${car.id}')"
+class="bg-red-600 text-white px-4 py-2 rounded mt-2">
+Delete
+</button>
+
+</div>
+`;
+
+});
+
+}
+
+addBtn.addEventListener("click", async ()=>{
+
+await addDoc(collection(db,"cars"),{
+
+carName:document.getElementById("carName").value,
+price:document.getElementById("price").value,
+year:document.getElementById("year").value,
+fuel:document.getElementById("fuel").value,
+image:document.getElementById("image").value
+
+});
+
+alert("Car Added");
+
+loadCars();
+
+});
+
+window.deleteCar = async(id)=>{
+
+await deleteDoc(doc(db,"cars",id));
+
+loadCars();
+
+};
+
+loadCars();
+
+</script>
+
+</body>
+</html>
