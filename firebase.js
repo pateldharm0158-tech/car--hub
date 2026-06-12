@@ -1,40 +1,53 @@
+// Firebase Config
+
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 
 import {
-getAuth,
-createUserWithEmailAndPassword,
-signInWithEmailAndPassword,
-signOut
+  getAuth,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  signOut,
+  onAuthStateChanged
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
 import {
-getFirestore
+  getFirestore,
+  collection,
+  addDoc,
+  getDocs,
+  deleteDoc,
+  updateDoc,
+  doc,
+  getDoc
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 const firebaseConfig = {
-
-apiKey: "PASTE_YOUR_API_KEY",
-
-authDomain: "PASTE_YOUR_AUTH_DOMAIN",
-
-projectId: "magneto-carsz",
-
-storageBucket: "PASTE_YOUR_STORAGE_BUCKET",
-
-messagingSenderId: "PASTE_YOUR_SENDER_ID",
-
-appId: "PASTE_YOUR_APP_ID"
-
+  apiKey: "AIzaSyBPt0iv3gKd2raUCNKshTWUC61d3SzL-FA",
+  authDomain: "magneto-carsz.firebaseapp.com",
+  projectId: "magneto-carsz",
+  storageBucket: "magneto-carsz.firebasestorage.app",
+  messagingSenderId: "574864338115",
+  appId: "1:574864338115:web:746c18191385c7b32b3c676",
+  measurementId: "G-11LMTCNM8P"
 };
 
 const app = initializeApp(firebaseConfig);
 
-export const auth = getAuth(app);
-
-export const db = getFirestore(app);
+const auth = getAuth(app);
+const db = getFirestore(app);
 
 export {
-createUserWithEmailAndPassword,
-signInWithEmailAndPassword,
-signOut
+  auth,
+  db,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  signOut,
+  onAuthStateChanged,
+  collection,
+  addDoc,
+  getDocs,
+  deleteDoc,
+  updateDoc,
+  doc,
+  getDoc
 };
