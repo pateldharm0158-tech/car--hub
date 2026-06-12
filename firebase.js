@@ -22,7 +22,7 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBPt0iv3gKd2raUCNKshTWUC61d3SzL-FA",
+  apiKey: "AIzaSyBPt0iv3qKd2raUcNKshTWUC6ld3SzL-FA",
   authDomain: "magneto-carsz.firebaseapp.com",
   projectId: "magneto-carsz",
   storageBucket: "magneto-carsz.firebasestorage.app",
