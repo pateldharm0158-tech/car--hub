@@ -1,1 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login - Magneto Carsz</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
 
+<body class="bg-black flex justify-center items-center min-h-screen">
+
+<div class="bg-white p-8 rounded-xl w-96">
+
+<h1 class="text-3xl font-bold mb-6 text-center">
+Login
+</h1>
+
+<input id="email" type="email" placeholder="Email"
+class="border w-full p-3 mb-4 rounded">
+
+<input id="password" type="password" placeholder="Password"
+class="border w-full p-3 mb-4 rounded">
+
+<button id="loginBtn"
+class="bg-red-600 text-white w-full p-3 rounded">
+Login
+</button>
+
+<p class="mt-4 text-center">
+<a href="signup.html" class="text-red-600">
+Create Account
+</a>
+</p>
+
+</div>
+
+<script type="module">
+
+import {
+auth,
+signInWithEmailAndPassword
+} from "./firebase.js";
+
+document.getElementById("loginBtn")
+.addEventListener("click",()=>{
+
+const email=document.getElementById("email").value;
+const password=document.getElementById("password").value;
+
+signInWithEmailAndPassword(auth,email,password)
+.then(()=>{
+
+alert("Login Successful");
+
+window.location="index.html";
+
+})
+.catch(error=>alert(error.message));
+
+});
+
+</script>
+
+</body>
+</html>
