@@ -15,21 +15,32 @@ Admin Panel
 
 <div class="bg-white p-6 rounded-xl shadow">
 
-<input id="carName" placeholder="Car Name"
-class="border p-3 w-full mb-3 rounded">
+<input id="carName" placeholder="Car Name" class="border p-3 w-full mb-3 rounded">
 
-<input id="price" placeholder="Price"
-class="border p-3 w-full mb-3 rounded">
+<input id="price" placeholder="Price" class="border p-3 w-full mb-3 rounded">
 
-<input id="year" placeholder="Year"
-class="border p-3 w-full mb-3 rounded">
 
-<input id="fuel" placeholder="Fuel"
-class="border p-3 w-full mb-3 rounded">
+<input id="trans" placeholder="Transmission" class="border p-3 w-full mb-3 rounded">
 
-<input id="image" placeholder="Image Path"
-class="border p-3 w-full mb-3 rounded">
+<input id="makeYear" placeholder="Make Year" class="border p-3 w-full mb-3 rounded">
 
+<input id="registrationYear" placeholder="Registration Year" class="border p-3 w-full mb-3 rounded">
+
+<input id="ownership" placeholder="Ownership" class="border p-3 w-full mb-3 rounded">
+
+<input id="driven" placeholder="Driven KM" class="border p-3 w-full mb-3 rounded">
+
+<input id="rto" placeholder="RTO" class="border p-3 w-full mb-3 rounded">
+
+<input id="insurance" placeholder="Insurance Year" class="border p-3 w-full mb-3 rounded">
+
+<input id="color" placeholder="Color" class="border p-3 w-full mb-3 rounded">
+
+<input id="image1" placeholder="Image 1 Path" class="border p-3 w-full mb-3 rounded">
+
+<input id="image2" placeholder="Image 2 Path" class="border p-3 w-full mb-3 rounded">
+
+<input id="image3" placeholder="Image 3 Path" class="border p-3 w-full mb-3 rounded">
 <button id="addCar"
 class="bg-red-600 text-white px-6 py-3 rounded">
 Add Car
@@ -74,11 +85,11 @@ carList.innerHTML += `
 
 <h3 class="text-xl font-bold">${data.carName}</h3>
 
-<p>${data.price}</p>
+<p>Price: ${data.price}</p>
+<p>Transmission: ${data.trans}</p>
+<p>Color: ${data.color}</p>
 
-<p>${data.year}</p>
 
-<p>${data.fuel}</p>
 
 <button onclick="deleteCar('${car.id}')"
 class="bg-red-600 text-white px-4 py-2 rounded mt-2">
@@ -96,11 +107,22 @@ addBtn.addEventListener("click", async ()=>{
 
 await addDoc(collection(db,"cars"),{
 
-carName:document.getElementById("carName").value,
-price:document.getElementById("price").value,
-year:document.getElementById("year").value,
-fuel:document.getElementById("fuel").value,
-image:document.getElementById("image").value
+carName: document.getElementById("carName").value,
+price: document.getElementById("price").value,
+trans: document.getElementById("trans").value,
+makeYear: document.getElementById("makeYear").value,
+registrationYear: document.getElementById("registrationYear").value,
+ownership: document.getElementById("ownership").value,
+driven: document.getElementById("driven").value,
+rto: document.getElementById("rto").value,
+insurance: document.getElementById("insurance").value,
+color: document.getElementById("color").value,
+
+images: [
+document.getElementById("image1").value,
+document.getElementById("image2").value,
+document.getElementById("image3").value
+]
 
 });
 
