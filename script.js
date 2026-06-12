@@ -521,7 +521,7 @@ class="mt-4 bg-red-600 text-white px-4 py-2 rounded-lg wishlist-btn">
       document.getElementById("detail-rto").textContent = currentCar.rto;
       document.getElementById("detail-transmission").textContent = currentCar.trans;
       document.getElementById("detail-insurance").textContent = currentCar.insurance;
-        
+      document.getElementById("detail-color").textContent = currentCar.color;  
       document.getElementById('car-price-display').textContent = currentCar.price;
 
       document.getElementById('main-image').src = currentCar.images[0];
