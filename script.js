@@ -1,20 +1,20 @@
 const cars = [
     {
   id: 1,
-  name: "2024 Mahindra XUV700 AX7",
-  price: "₹22.50 Lakh",
-  numericPrice: 2250000,
+  name: "Mahindra XUV700 AX7",
+  price: "₹9.50 lakh ",
+  numericPrice: 950000,
 img: "xuv700/xuv 5.png",
 fuel: "Diesel",
 trans: "Automatic",
 
-makeYear: "2024",
-registrationYear: "2024",
-ownership: "1st",
-driven: "12,000 KM",
-rto: "GJ",
+makeYear: " Jan 2024",
+registrationYear: "Aug 2024 ",
+ownership: "2nd",
+driven: "1,00,000 km",
+rto: "GJ 05",
 insurance: "2027",
-
+color:"Black",
 images: [
   "xuv700/xuv 5.png",
   "xuv700/xuv 2.png",
@@ -28,22 +28,22 @@ images: [
 },
       {
   id: 2,
-  name: "2024 Volkswagen Virtus GT",
-  price: "₹16.75 Lakh",
-  numericPrice: 1675000,
+  name: "Volkswagen Virtus GT",
+  price: "10.60  lakh",
+  numericPrice: 1060000,
 
   img:  "virtus/virtus 9.png",
 
   fuel: "Petrol",
   trans: "Manual",
 
-  makeYear: "2024",
-  registrationYear: "2024",
+  makeYear: "Nov 2024",
+  registrationYear: "Feb 2025",
   ownership: "1st",
-  driven: "8,500 KM",
-  rto: "GJ",
+  driven: "50,000 km",
+  rto: "GJ 19",
   insurance: "2027",
-
+    color:"Golden",
   images: [
     "virtus/virtus 9.png",
     "virtus/virtus 1.jpeg",
@@ -57,22 +57,22 @@ images: [
 },
      {
   id: 3,
-  name: "2023 Renault Triber RXZ",
-  price: "₹6.95 Lakh",
-  numericPrice: 695000,
+  name: "Renault Triber RXZ",
+  price: "₹6 Lakh",
+  numericPrice: 600000,
 
   img: "triber 2023/triber 9.png",
 
-  fuel: "Petrol",
+  fuel: "Diesel",
   trans: "Manual",
 
-  makeYear: "2023",
-  registrationYear: "2023",
-  ownership: "1st",
-  driven: "35,000 KM",
-  rto: "GJ",
-  insurance: "2027",
-
+  makeYear: "AP 2023",
+  registrationYear: "May 2023",
+  ownership: "2nd",
+  driven: "70,000 km",
+  rto: "GJ 01",
+  insurance: "2028",
+    color:"Metal Mustard",
   images: [
     "triber 2023/triber 9.png",
     "triber 2023/triber 1.png",
@@ -87,22 +87,22 @@ images: [
 },
      {
   id: 4,
-  name: "2022 Skoda Rapid",
-  price: "₹8.95 Lakh",
-  numericPrice: 895000,
+  name: "Skoda Rapid",
+  price: "₹4.5 Lakh",
+  numericPrice: 450000,
 
   img: "Skoda Rapid/Skoda Rapid 8.png",
 
-  fuel: "Petrol",
+  fuel: "Diesel",
   trans: "Manual",
 
-  makeYear: "2022",
-  registrationYear: "2022",
+  makeYear: "Feb 2022",
+  registrationYear: "Ap 2022",
   ownership: "1st",
-  driven: "42,000 KM",
-  rto: "GJ",
-  insurance: "2027",
-
+  driven: "90,000 km",
+  rto: "GJ 15",
+  insurance: "2029",
+  color:"Red",
   images: [
     "Skoda Rapid/Skoda Rapid 8.png",
     "Skoda Rapid/Skoda Rapid 1   .jpeg",
@@ -117,22 +117,22 @@ images: [
 },
     {
   id: 5,
-  name: "2019 Maruti Suzuki Dzire",
-  price: "₹6.50 Lakh",
-  numericPrice: 650000,
+  name: "Maruti Suzuki Dzire",
+  price: "₹3.9 Lakh",
+  numericPrice:  390000,
 
   img: "Maruti Suzuki Dzire/Maruti Suzuki Dzire 9.png",
 
   fuel: "Petrol",
   trans: "Manual",
 
-  makeYear: "2019",
-  registrationYear: "2019",
-  ownership: "1st",
-  driven: "55,000 KM",
-  rto: "GJ",
+  makeYear: "Jan 2019",
+  registrationYear: "Sep 2019",
+  ownership: "2nd",
+  driven: "1,00,000 km",
+  rto: "GJ 26",
   insurance: "2027",
-
+    color:"Red",
   images: [
     "Maruti Suzuki Dzire/Maruti Suzuki Dzire 9.png",
     "Maruti Suzuki Dzire/Maruti Suzuki Dzire 1.jpeg",
@@ -147,9 +147,9 @@ images: [
 },
     {
   id: 6,
-  name: "2017 Toyota Innova Crysta",
-  price: "₹12.95 Lakh",
-  numericPrice: 1295000,
+  name: "Toyota Innova Crysta",
+  price: "₹11 Lakh",
+  numericPrice: 1100000,
 
   img: "innova crysta 2017/innova-2.png",
 
@@ -157,13 +157,13 @@ images: [
       
   trans: "Manual",
 
-  makeYear: "2017",
-  registrationYear: "2017",
+  makeYear: "Nov 2017",
+  registrationYear: "Jan 2018",
   ownership: "1st",
-  driven: "85,000 KM",
-  rto: "GJ",
+  driven: "1,20,000 km",
+  rto: "GJ 03",
   insurance: "2027",
-
+      color:"White",
   images: [
     "innova crysta 2017/innova-2.png",
     "innova crysta 2017/innova-1.png",
@@ -177,22 +177,22 @@ images: [
 },
     {
   id: 7,
-  name: "2020 Honda City",
-  price: "₹8.95 Lakh",
-  numericPrice: 895000,
+  name: "Honda City",
+  price: "5.50 Lakh",
+  numericPrice: 550000,
 
   img: "honda City/Honda City7.png",
 
   fuel: "Petrol",
   trans: "Manual",
 
-  makeYear: "2020",
-  registrationYear: "2020",
-  ownership: "1st",
-  driven: "45,000 KM",
-  rto: "GJ",
+  makeYear: "Jun 2020",
+  registrationYear: "Dec 2020",
+  ownership: "2nd",
+  driven: "85,000 km",
+  rto: " GJ 16",
   insurance: "2027",
-
+    color:"Grey", 
   images: [
     "honda City/Honda City1.jpeg",
     "honda City/Honda City2.jpeg",
@@ -207,21 +207,22 @@ images: [
 },
     {
   id: 8,
-  name: "2020 Ford Endeavour",
-  price: "₹24.95 Lakh",
-  numericPrice: 2495000,
+  name: " Ford Endeavour",
+  price: "₹9.90 Lakh",
+  numericPrice: 990000,
 
   img: "endeavour 2020/endeavour 7.png",
 
   fuel: "Diesel",
   trans: "Manual",
 
-  makeYear: "2020",
-  registrationYear: "2020",
+  makeYear: "Mar 2020",
+  registrationYear: "July 2020",
   ownership: "1st",
-  driven: "58,000 KM",
-  rto: "GJ",
-  insurance: "2027",
+  driven: "1,46,000 km",
+  rto: "GJ 06",
+  insurance: "2029",
+  color:"Black",
 
   images: [
     "endeavour 2020/endeavour 1.jpeg",
@@ -238,21 +239,21 @@ images: [
     {
   id: 9,
   name: "2022 Maruti Suzuki Ertiga",
-  price: "₹9.50 Lakh",
-  numericPrice: 950000,
+  price: "₹6.90 Lakh",
+  numericPrice: 690000,
 
   img: "eartiga 2022/eartiga 4.png",
 
   fuel: "Petrol",
   trans: "Manual",
 
-  makeYear: "2022",
-  registrationYear: "2022",
-  ownership: "1st",
-  driven: "38,000 KM",
-  rto: "GJ",
+  makeYear: "May 2023",
+  registrationYear: "Oct 2023",
+  ownership: "2nd",
+  driven: "1,05,000 km",
+  rto: "GJ 023",
   insurance: "2027",
-
+  color:"Silver",
   images: [
     "eartiga 2022/eartiga 1.png",
     "eartiga 2022/eartiga 2.png",
@@ -267,22 +268,22 @@ images: [
 },
 {
   id: 10,
-  name: "2019 BMW 520d",
-  price: "₹32.95 Lakh",
-  numericPrice: 3295000,
+  name: "BMW 520d",
+  price: "₹12.50 Lakh",
+  numericPrice: 1250000,
 
   img: "Bmwv5/Bmwv5-4.png",
 
   fuel: "Diesel",
   trans: "Manual",
 
-  makeYear: "2019",
-  registrationYear: "2019",
+  makeYear: "Jan 2019",
+  registrationYear: "July 2023",
   ownership: "1st",
-  driven: "52,000 KM",
-  rto: "GJ",
+  driven: "96,000 km",
+  rto: "GJ 17",
   insurance: "2027",
-
+  color:"Grey",
   images: [
     "Bmwv5/Bmwv5-1.jpeg",
     "Bmwv5/Bmwv5-2.jpeg",
@@ -297,22 +298,22 @@ images: [
 },
     {
   id: 11,
-  name: "2023 Hyundai Alcazar",
-  price: "₹18.95 Lakh",
-  numericPrice: 1895000,
+  name: " Hyundai Alcazar",
+  price: "₹13 Lakh",
+  numericPrice: 1300000,
 
   img: "alcazar 2023/alcazar 9.png",
 
   fuel: "Diesel",
   trans: "Manual",
 
-  makeYear: "2023",
-  registrationYear: "2023",
+  makeYear: "Ap 2023",
+  registrationYear: "Jun 2023",
   ownership: "1st",
-  driven: "22,000 KM",
-  rto: "GJ",
+  driven: "80,000 km",
+  rto: "GJ 18",
   insurance: "2028",
-
+   color:"Starry Night",
   images: [
     "alcazar 2023/alcazar 1.jpeg",
     "alcazar 2023/alcazar 2.png",
@@ -327,22 +328,22 @@ images: [
 },
     {
   id: 12,
-  name: "2020 Hyundai Verna",
-  price: "₹10.95 Lakh",
-  numericPrice: 1095000,
+  name: "Hyundai Verna",
+  price: "₹6.15 Lakh",
+  numericPrice: 615000,
 
   img: "verna 2020/verna 1.png",
 
-  fuel: "Petrol",
+  fuel: "Diesel",
   trans: "Automatic",
 
-  makeYear: "2020",
-  registrationYear: "2020",
+  makeYear: "Sep 2020",
+  registrationYear: "Dec 2020",
   ownership: "1st",
-  driven: "42,000 KM",
-  rto: "GJ",
-  insurance: "2027",
-
+  driven: "86,000 km",
+  rto: "GJ 14",
+  insurance: "2028",
+  color:"Black",
   images: [
     "verna 2020/verna 1.png",
     "verna 2020/verna 2.png",
@@ -356,22 +357,22 @@ images: [
 },
     {
   id: 13,
-  name: "2024 Hyundai i20 Sportz IVT",
-  price: "₹8.95 Lakh",
-  numericPrice: 895000,
+  name: " Hyundai i20 Sportz IVT",
+  price: "₹6.60 Lakh",
+  numericPrice: 660000,
 
   img: "i20 2025/i20 1.png",
 
-  fuel: "Petrol",
+  fuel: "Diesel",
   trans: "Automatic",
 
-  makeYear: "2024",
-  registrationYear: "2024",
-  ownership: "1st",
-  driven: "10,000 KM",
-  rto: "GJ",
+  makeYear: "Aug 2024",
+  registrationYear: "Oct 2024",
+  ownership: "2nd",
+  driven: "59,000 km",
+  rto: "GJ 01",
   insurance: "2027",
-
+  color:"Titan Grey",
   images: [
     "i20 2025/i20 1.png",
     "i20 2025/i20 2.png",
@@ -384,22 +385,22 @@ images: [
 },
     {
   id: 14,
-  name: "2018 Volkswagen Polo",
-  price: "₹5.95 Lakh",
-  numericPrice: 595000,
+  name: " Volkswagen Polo",
+  price: "₹4.30 Lakh",
+  numericPrice: 430000,
 
   img: "polo 2018/polo 1.png",
 
-  fuel: "Petrol",
+  fuel: "Diesel",
   trans: "Manual",
 
-  makeYear: "2018",
-  registrationYear: "2018",
+  makeYear: "May 2018",
+  registrationYear: "Jul 2018",
   ownership: "1st",
-  driven: "65,000 KM",
-  rto: "GJ",
+  driven: "1,00,000 km",
+  rto: "GJ 13",
   insurance: "2027",
-
+   color:"white",
   images: [
     "polo 2018/polo 1.png",
     "polo 2018/polo 2.png",
@@ -413,22 +414,22 @@ images: [
 },
     {
   id: 15,
-  name: "2021 Tata Harrier XM",
-  price: "₹13.95 Lakh",
-  numericPrice: 1395000,
+  name: "Tata Harrier XM",
+  price: "₹11.50 Lakh",
+  numericPrice: 1150000,
 
   img: "harrier 2021/harrier 1.png",
 
   fuel: "Diesel",
   trans: "Manual",
 
-  makeYear: "2021",
-  registrationYear: "2021",
-  ownership: "1st",
-  driven: "48,000 KM",
-  rto: "GJ",
+  makeYear: "Dec 2021",
+  registrationYear: "Feb 2022",
+  ownership: "2nd",
+  driven: "90,000 km",
+  rto: "GJ 21",
   insurance: "2027",
-
+    color:"black",
   images: [
     "harrier 2021/harrier 1.png",
     "harrier 2021/harrier 2.png",
