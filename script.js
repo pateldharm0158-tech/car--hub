@@ -449,6 +449,23 @@ function shareWebsite() {
   }
 }
 
+
+
+
+
+
+    
+window.onload = async () => {
+  await loadCarsFromFirestore();
+  renderFAQ();
+};
+
+
+function toggleMenu(){
+
+document
+.getElementById("mobileMenu")
+.classList.toggle("hidden");
 window.openCarModal = openCarModal;
 window.addToWishlist = addToWishlist;
 window.closeModal = closeModal;
@@ -463,19 +480,5 @@ window.prevImage = prevImage;
 window.callNow = callNow;
 window.bookNow = bookNow;
 window.toggleMenu = toggleMenu;
-
-
-
-
-    
-window.onload = async () => {
-  await loadCarsFromFirestore();
-  renderFAQ();
-};
-function toggleMenu(){
-
-document
-.getElementById("mobileMenu")
-.classList.toggle("hidden");
-
+  
 }
