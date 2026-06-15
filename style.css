@@ -197,3 +197,11 @@ transform:scale(0.9);
   }
 
 }
+footer{
+background: linear-gradient(
+180deg,
+#111111 0%,
+#050505 40%,
+#000000 100%
+);
+}
