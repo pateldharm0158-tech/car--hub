@@ -52,8 +52,9 @@ const data = doc.data();
 container.innerHTML += `
 <div class="bg-white p-8 rounded-3xl shadow min-w-[350px] max-w-[350px]">
 
-<img src="${data.photo}"
+<img src="https://ui-avatars.com/api/?name=${data.name}&background=random"
 class="w-20 h-20 rounded-full mx-auto mb-4">
+
 
 <p class="italic text-gray-600 text-center">
 "${data.review}"
