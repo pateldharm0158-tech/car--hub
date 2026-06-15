@@ -215,3 +215,34 @@ to bottom,
 );
 border-top:1px solid #111;
 }
+.big-logo{
+text-align:center;
+margin-top:70px;
+overflow:hidden;
+}
+
+.big-logo h1{
+font-size:180px;
+font-weight:900;
+margin:0;
+letter-spacing:8px;
+text-transform:uppercase;
+
+background:linear-gradient(
+180deg,
+#7a7a7a 0%,
+#4d4d4d 35%,
+#1f1f1f 70%,
+#000000 100%
+);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+background-clip:text;
+}
+
+@media(max-width:768px){
+.big-logo h1{
+font-size:70px;
+}
+}
