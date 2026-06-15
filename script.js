@@ -46,7 +46,7 @@ async function loadCarsFromFirestore() {
     function renderCars() {
       const grid = document.getElementById('car-grid');
       grid.innerHTML = cars.map(car => `
-<div onclick="openCarModal(${car.id})"
+<div onclick="window.openCarModal(${car.id})"
 class="car-card bg-white rounded-3xl overflow-hidden cursor-pointer">
 <img src="${car.img}" class="w-full h-48 sm:h-56 object-cover">         
            <div class="p-4">
@@ -419,7 +419,7 @@ related.map(car => `
 
 
 
-<div onclick="openCarModal(${car.id})"
+<div onclick="window.openCarModal(${car.id})"
 class="bg-white rounded-3xl shadow-lg overflow-hidden cursor-pointer">
 
 <img src="${car.img}"
@@ -481,3 +481,5 @@ window.prevImage = prevImage;
 window.callNow = callNow;
 window.bookNow = bookNow;
 window.toggleMenu = toggleMenu;
+window.renderCars = renderCars;
+window.renderRelatedCars = renderRelatedCars;
