@@ -5,6 +5,7 @@ import {
 } from "./firebase.js";
 
 let cars = [];
+
 async function loadCarsFromFirestore() {
 
   const querySnapshot =
@@ -31,15 +32,16 @@ async function loadCarsFromFirestore() {
       color: data.color,
       img: data.images?.[0] || "",
       images: data.images || [],
-      numericPrice: parseInt(
-        String(data.price).replace(/[^\d]/g, "")
-      ) || 0
+      numericPrice:
+        parseInt(String(data.price).replace(/[^\d]/g, "")) || 0
     });
 
   });
 
   renderCars();
 }
+
+
 
     function renderCars() {
       const grid = document.getElementById('car-grid');
@@ -414,6 +416,9 @@ cars.filter(car => car.id !== currentId)
 document.getElementById("relatedCars").innerHTML =
 related.map(car => `
 
+
+
+
 <div onclick="openCarModal(${car.id})"
 class="bg-white rounded-3xl shadow-lg overflow-hidden cursor-pointer">
 
@@ -448,24 +453,20 @@ function shareWebsite() {
     alert("Website link copied!");
   }
 }
-
-
-
-
-
-
     
-window.onload = async () => {
+    
+  window.onload = async () => {
   await loadCarsFromFirestore();
   renderFAQ();
 };
-
-
 function toggleMenu(){
 
 document
 .getElementById("mobileMenu")
 .classList.toggle("hidden");
+
+}
+
 window.openCarModal = openCarModal;
 window.addToWishlist = addToWishlist;
 window.closeModal = closeModal;
@@ -480,5 +481,3 @@ window.prevImage = prevImage;
 window.callNow = callNow;
 window.bookNow = bookNow;
 window.toggleMenu = toggleMenu;
-  
-}
