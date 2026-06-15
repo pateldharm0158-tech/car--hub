@@ -9,6 +9,15 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="style.css">
 
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+emailjs.init("stEddQ9-kdgh_oAGy");
+</script>
+  
+  
+
 </head>
 
 <body class="bg-gray-100">
@@ -97,24 +106,27 @@ Get in touch
 Contact Magneto Carsz for buying, selling or any vehicle inquiry.
 </p>
 
-<form>
-
+<form id="contactForm">
 <input
+id="name"
 type="text"
 placeholder="Your Name*"
 class="w-full border-b p-4 mb-8 bg-transparent">
 
 <input
+id="email"
 type="email"
 placeholder="E-mail*"
 class="w-full border-b p-4 mb-8 bg-transparent">
 
 <input
+id="phone"
 type="tel"
 placeholder="Phone*"
 class="w-full border-b p-4 mb-8 bg-transparent">
 
 <textarea
+id="message"
 placeholder="Message"
 rows="4"
 class="w-full border-b p-4 mb-10 bg-transparent"></textarea>
@@ -146,5 +158,43 @@ Premium Pre-Owned Cars with trust and transparency.
 
 </footer>
 
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e){
+
+e.preventDefault();
+
+const templateParams = {
+name: document.getElementById("name").value,
+email: document.getElementById("email").value,
+phone: document.getElementById("phone").value,
+message: document.getElementById("message").value
+};
+
+emailjs.send(
+"service_in8x1p7",
+"template_c4aiwuj",
+templateParams
+)
+.then(function(){
+
+alert("Message Sent Successfully!");
+
+document.getElementById("contactForm").reset();
+
+})
+.catch(function(error){
+
+alert("Failed to send message");
+
+console.log(error);
+
+});
+
+});
+</script>
+  
+
+  
 </body>
 </html>
