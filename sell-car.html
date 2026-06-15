@@ -162,5 +162,24 @@ SUBMIT DETAILS
 
 </form>
 </div>
+  
+  <script>
+const manufacturingYear =
+document.getElementById("manufacturingYear");
+
+const registrationYear =
+document.getElementById("registrationYear");
+
+for(let year = 2026; year >= 2000; year--){
+
+manufacturingYear.innerHTML +=
+`<option value="${year}">${year}</option>`;
+
+registrationYear.innerHTML +=
+`<option value="${year}">${year}</option>`;
+}
+</script>
+
 </body>
 </html>
+
