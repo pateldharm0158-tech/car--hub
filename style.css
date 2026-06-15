@@ -205,3 +205,13 @@ background: linear-gradient(
 #000000 100%
 );
 }
+.footer-elite{
+background:
+linear-gradient(
+to bottom,
+#1a1a1a 0%,
+#0d0d0d 30%,
+#000000 100%
+);
+border-top:1px solid #111;
+}
