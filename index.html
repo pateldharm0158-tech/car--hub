@@ -736,75 +736,6 @@ class="fixed bottom-42 right-6 z-[9999] bg-black text-white w-16 h-16 rounded-fu
 
 <script>
 
-function saveReview(){
-
-const name =
-document.getElementById("reviewName").value;
-
-const review =
-document.getElementById("reviewText").value;
-
-if(name === "" || review === ""){
-alert("Fill all fields");
-return;
-}
-
-let reviews =
-JSON.parse(localStorage.getItem("reviews")) || [];
-
-reviews.push({
-name:name,
-review:review
-});
-
-localStorage.setItem(
-"reviews",
-JSON.stringify(reviews)
-);
-
-loadReviews();
-
-document.getElementById("reviewName").value = "";
-document.getElementById("reviewText").value = "";
-
-}
-
-function loadReviews(){
-
-const container =
-document.getElementById("reviewsContainer");
-
-let html = "";
-
-const reviews =
-JSON.parse(localStorage.getItem("reviews")) || [];
-
-reviews.forEach(r => {
-
-html += `
-<div class="bg-white p-8 rounded-3xl">
-
-<p class="italic">
-"${r.review}"
-</p>
-
-<div class="mt-6 font-semibold">
-${r.name}
-</div>
-
-</div>
-`;
-
-});
-
-container.innerHTML += html;
-
-}
-
-window.onload = loadReviews;
-
-</script>
-  
 
 
   
@@ -812,5 +743,7 @@ window.onload = loadReviews;
 
   
 <script src="script.js"></script>
+<script type="module" src="reviews.js"></script>
+  
 </body>
 </html>
