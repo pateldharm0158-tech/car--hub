@@ -5,7 +5,7 @@ addDoc,
 getDocs
 } from "./firebase.js";
 
-window.addReview = async function () {
+window.saveReview = async function(){
 
 const name =
 document.getElementById("reviewName").value;
@@ -21,16 +21,19 @@ return;
 await addDoc(
 collection(db,"reviews"),
 {
-name:name,
-review:review,
+name,
+review,
 photo:"https://picsum.photos/80"
 }
 );
 
 alert("Review Added");
 
+document.getElementById("reviewName").value="";
+document.getElementById("reviewText").value="";
+
 loadReviews();
-}
+};
 
 async function loadReviews(){
 
@@ -47,19 +50,10 @@ snapshot.forEach((doc)=>{
 const data = doc.data();
 
 container.innerHTML += `
-<div class="bg-white p-6 rounded-3xl shadow">
-
-<img src="${data.photo}"
-class="w-20 h-20 rounded-full mx-auto mb-4">
-
-<p class="italic mb-4">
-"${data.review}"
-</p>
-
-<h3 class="font-bold text-xl">
-${data.name}
-</h3>
-
+<div class="bg-white p-8 rounded-3xl">
+<img src="${data.photo}" class="w-16 h-16 rounded-full mb-4">
+<p class="italic">"${data.review}"</p>
+<div class="mt-6 font-semibold">${data.name}</div>
 </div>
 `;
 });
