@@ -169,7 +169,8 @@ SUBMIT DETAILS
 </form>
 </div>
   
-  <script>
+
+<script>
 const manufacturingYear =
 document.getElementById("manufacturingYear");
 
@@ -177,15 +178,55 @@ const registrationYear =
 document.getElementById("registrationYear");
 
 for(let year = 2026; year >= 2000; year--){
-
-manufacturingYear.innerHTML +=
-`<option value="${year}">${year}</option>`;
-
-registrationYear.innerHTML +=
-`<option value="${year}">${year}</option>`;
+manufacturingYear.innerHTML += `<option value="${year}">${year}</option>`;
+registrationYear.innerHTML += `<option value="${year}">${year}</option>`;
 }
-</script>
 
+document.getElementById("sellCarForm").addEventListener("submit", function(e){
+
+e.preventDefault();
+
+const templateParams = {
+name: document.getElementById("name").value,
+mobile: document.getElementById("mobile").value,
+whatsapp: document.getElementById("whatsapp").value,
+city: document.getElementById("city").value,
+state: document.getElementById("state").value,
+registration: document.getElementById("registration").value,
+manufacturing_year: document.getElementById("manufacturingYear").value,
+registration_year: document.getElementById("registrationYear").value,
+owner: document.getElementById("owner").value,
+brand: document.getElementById("brand").value,
+model: document.getElementById("model").value,
+variant: document.getElementById("variant").value,
+driven: document.getElementById("driven").value,
+fuel: document.getElementById("fuel").value,
+transmission: document.getElementById("transmission").value,
+price: document.getElementById("price").value
+};
+
+emailjs.send(
+"service_in8x1p7",
+"template_c4aiwuj",
+templateParams
+)
+.then(function() {
+
+alert("Thank You! Your car details have been submitted successfully.");
+
+document.getElementById("sellCarForm").reset();
+
+})
+.catch(function(error) {
+
+alert("Failed to send details.");
+
+console.log(error);
+
+});
+
+});
+</script>
 </body>
 </html>
 
