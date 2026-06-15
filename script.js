@@ -4,15 +4,17 @@ import {
   getDocs
 } from "./firebase.js";
 
-let cars = [];
+window.cars = [];
+let cars = window.cars;
 
 async function loadCarsFromFirestore() {
 
   const querySnapshot =
     await getDocs(collection(db, "cars"));
 
-  cars = [];
-
+window.cars = [];
+cars = window.cars;
+  
   querySnapshot.forEach((docSnap, index) => {
 
     const data = docSnap.data();
@@ -38,7 +40,8 @@ async function loadCarsFromFirestore() {
 
   });
 
-  renderCars();
+renderCars();
+window.cars = cars;
 }
 
 
@@ -104,8 +107,11 @@ class="mt-4 bg-red-600 text-white px-4 py-2 rounded-lg wishlist-btn">
       currentCar = cars.find(c => c.id === id);
       if (!currentCar) return;
         
-      document.querySelector('a[href*="wa.me"]').style.display = "none";
-      document.querySelector('a[href*="tel:"]').style.display = "none"; 
+    const whatsappBtn = document.querySelector('a[href*="wa.me"]');
+const callBtn = document.querySelector('a[href*="tel:"]');
+
+if (whatsappBtn) whatsappBtn.style.display = "none";
+if (callBtn) callBtn.style.display = "none";
       document.getElementById('modal-car-name').textContent = currentCar.name;
       document.getElementById('modal-price').textContent = currentCar.price;
       document.getElementById("detail-makeyear").textContent = currentCar.makeYear;
@@ -173,6 +179,9 @@ function prevImage() {
     currentCar.images[currentImageIndex];
 }
 
+
+
+
 function startAutoSlide() {
   clearInterval(slideInterval);
 
@@ -184,9 +193,11 @@ function startAutoSlide() {
    function closeModal() {
   clearInterval(slideInterval);
 
-  document.querySelector('a[href*="wa.me"]').style.display = "flex";
-  document.querySelector('a[href*="tel:"]').style.display = "flex";
+ const whatsappBtn = document.querySelector('a[href*="wa.me"]');
+const callBtn = document.querySelector('a[href*="tel:"]');
 
+if (whatsappBtn) whatsappBtn.style.display = "flex";
+if (callBtn) callBtn.style.display = "flex";
   document.getElementById('carModal').classList.add('hidden');
 }
     // Fixed & Linked EMI Calculator
@@ -468,6 +479,7 @@ document
 }
 
 window.openCarModal = openCarModal;
+window.cars = cars;
 window.addToWishlist = addToWishlist;
 window.closeModal = closeModal;
 window.showWishlist = showWishlist;
