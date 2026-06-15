@@ -23,7 +23,7 @@ collection(db,"reviews"),
 {
 name,
 review,
-photo:"https://picsum.photos/80"
+photo:`https://ui-avatars.com/api/?name=${name}&background=random`  
 }
 );
 
@@ -50,7 +50,7 @@ snapshot.forEach((doc)=>{
 const data = doc.data();
 
 container.innerHTML += `
-<div class="bg-white p-8 rounded-3xl shadow">
+<div class="bg-white p-8 rounded-3xl shadow min-w-[350px] max-w-[350px]">
 
 <img src="${data.photo}"
 class="w-20 h-20 rounded-full mx-auto mb-4">
