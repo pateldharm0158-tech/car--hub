@@ -9,6 +9,13 @@
 <script src="https://cdn.tailwindcss.com"></script>
 
 <link rel="stylesheet" href="style.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+emailjs.init("stEddQ9-kdgh_oAGy");
+</script>
+  
 </head>
 
 <body class="bg-gray-100">
@@ -30,49 +37,48 @@ Share your vehicle details and our team will contact you.
 </p>
 
 </div>
-<form class="bg-white p-8 rounded-3xl shadow">
-
+<form id="sellCarForm" class="bg-white p-8 rounded-3xl shadow">
 <div class="grid md:grid-cols-2 gap-6">
 
 <div>
 <label class="font-bold">Your Name *</label>
-<input type="text"
+<input id="name" type="text"
 class="w-full border p-4 rounded-xl mt-2"
 placeholder="Enter your full name">
 </div>
 
 <div>
 <label class="font-bold">Mobile Number *</label>
-<input type="tel"
+<input id="mobile" type="tel"
 class="w-full border p-4 rounded-xl mt-2"
 placeholder="Enter mobile number">
 </div>
 
 <div>
 <label class="font-bold">WhatsApp Number *</label>
-<input type="tel"
+<input id="whatsapp" type="tel"
 class="w-full border p-4 rounded-xl mt-2"
 placeholder="Enter WhatsApp number">
 </div>
 
 <div>
 <label class="font-bold">City *</label>
-<input type="text"
+<input id="city" type="text"
 class="w-full border p-4 rounded-xl mt-2"
 placeholder="Enter city">
 </div>
 
 <div>
 <label class="font-bold">Registration Number *</label>
-<input type="text"
+<input id="registration" type="text"
 class="w-full border p-4 rounded-xl mt-2"
 placeholder="GJ05AB1234">
 </div>
 
 <div>
 <label class="font-bold">State *</label>
-<select class="w-full border p-4 rounded-xl mt-2">
-<option>Choose State</option>
+<select id="state" class="w-full border p-4 rounded-xl mt-2">
+  <option>Choose State</option>
 <option>Gujarat</option>
 <option>Maharashtra</option>
 <option>Delhi</option>
@@ -95,8 +101,8 @@ placeholder="GJ05AB1234">
   
 <div>
 <label class="font-bold">Owner Type *</label>
-<select class="w-full border p-4 rounded-xl mt-2">
-<option>1st Owner</option>
+<select id="owner" class="w-full border p-4 rounded-xl mt-2">
+  <option>1st Owner</option>
 <option>2nd Owner</option>
 <option>3rd Owner</option>
 </select>
@@ -104,7 +110,7 @@ placeholder="GJ05AB1234">
 
 <div>
 <label class="font-bold">Brand *</label>
-<input
+<input id="brand"
 type="text"
 class="w-full border p-4 rounded-xl mt-2"
 placeholder="Enter Brand Name">
@@ -112,26 +118,26 @@ placeholder="Enter Brand Name">
 
 <div>
 <label class="font-bold">Model Name *</label>
-<input type="text"
+<input id="model" type="text"
 class="w-full border p-4 rounded-xl mt-2">
 </div>
 
 <div>
 <label class="font-bold">Variant *</label>
-<input type="text"
+<input id="variant" type="text"
 class="w-full border p-4 rounded-xl mt-2">
 </div>
 
 <div>
 <label class="font-bold">Driven (KM) *</label>
-<input type="text"
+<input id="driven" type="text"
 class="w-full border p-4 rounded-xl mt-2">
 </div>
 
 <div>
 <label class="font-bold">Fuel Type *</label>
-<select class="w-full border p-4 rounded-xl mt-2">
-<option>Petrol</option>
+<select id="fuel" class="w-full border p-4 rounded-xl mt-2">
+  <option>Petrol</option>
 <option>Diesel</option>
 <option>CNG</option>
 <option>Electric</option>
@@ -140,8 +146,8 @@ class="w-full border p-4 rounded-xl mt-2">
 
 <div>
 <label class="font-bold">Transmission *</label>
-<select class="w-full border p-4 rounded-xl mt-2">
-<option>Manual</option>
+<select id="transmission" class="w-full border p-4 rounded-xl mt-2">
+  <option>Manual</option>
 <option>Automatic</option>
 </select>
 </div>
@@ -150,7 +156,7 @@ class="w-full border p-4 rounded-xl mt-2">
 
 <div class="mt-6">
 <label class="font-bold">Expected Price *</label>
-<input type="text"
+<input id="price" type="text"
 class="w-full border p-4 rounded-xl mt-2"
 placeholder="₹">
 </div>
