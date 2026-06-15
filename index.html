@@ -102,7 +102,7 @@ class="flex gap-6 overflow-x-auto pb-4 scroll-smooth">
   <section class="py-20 bg-gray-100">
     <div class="max-w-7xl mx-auto px-6">
       <h2 class="text-4xl font-bold text-center mb-12">What Our Customers Say</h2>
-      <div class="grid md:grid-cols-3 gap-8">
+      <div id="reviewsContainer" class="grid md:grid-cols-3 gap-8">
         <div class="bg-white p-8 rounded-3xl">
           <img src="https://picsum.photos/id/64/80/80" class="w-16 h-16 rounded-full mb-4" alt="">
           <p class="italic">"Best car buying experience. Transparent and professional."</p>
@@ -118,6 +118,30 @@ class="flex gap-6 overflow-x-auto pb-4 scroll-smooth">
           <p class="italic">"Smooth process and great after sales support."</p>
           <div class="mt-6 font-semibold">Krishnendra Dwivedi</div>
         </div>
+        <div class="mt-10 bg-white p-6 rounded-3xl">
+
+<h3 class="text-2xl font-bold mb-4">
+Add Customer Review
+</h3>
+
+<input
+id="reviewName"
+type="text"
+placeholder="Customer Name"
+class="w-full border p-3 rounded-xl mb-3">
+
+<textarea
+id="reviewText"
+placeholder="Write Review"
+class="w-full border p-3 rounded-xl mb-3"></textarea>
+
+<button
+onclick="saveReview()"
+class="bg-red-600 text-white px-6 py-3 rounded-xl">
+Add Review
+</button>
+
+</div>
       </div>
     </div>
   </section>
@@ -709,6 +733,79 @@ class="fixed bottom-42 right-6 z-[9999] bg-black text-white w-16 h-16 rounded-fu
 <i class="fa-solid fa-share-nodes"></i>
 
 </button>
+
+<script>
+
+function saveReview(){
+
+const name =
+document.getElementById("reviewName").value;
+
+const review =
+document.getElementById("reviewText").value;
+
+if(name === "" || review === ""){
+alert("Fill all fields");
+return;
+}
+
+let reviews =
+JSON.parse(localStorage.getItem("reviews")) || [];
+
+reviews.push({
+name:name,
+review:review
+});
+
+localStorage.setItem(
+"reviews",
+JSON.stringify(reviews)
+);
+
+loadReviews();
+
+document.getElementById("reviewName").value = "";
+document.getElementById("reviewText").value = "";
+
+}
+
+function loadReviews(){
+
+const container =
+document.getElementById("reviewsContainer");
+
+let html = "";
+
+const reviews =
+JSON.parse(localStorage.getItem("reviews")) || [];
+
+reviews.forEach(r => {
+
+html += `
+<div class="bg-white p-8 rounded-3xl">
+
+<p class="italic">
+"${r.review}"
+</p>
+
+<div class="mt-6 font-semibold">
+${r.name}
+</div>
+
+</div>
+`;
+
+});
+
+container.innerHTML += html;
+
+}
+
+window.onload = loadReviews;
+
+</script>
+  
+
 
   
   
