@@ -50,7 +50,7 @@ snapshot.forEach((doc)=>{
 const data = doc.data();
 
 container.innerHTML += `
-<div class="bg-white p-8 rounded-3xl">
+<div class="bg-white p-8 rounded-3xl shadow min-w-[320px]">
 <img src="${data.photo}" class="w-16 h-16 rounded-full mb-4">
 <p class="italic">"${data.review}"</p>
 <div class="mt-6 font-semibold">${data.name}</div>
