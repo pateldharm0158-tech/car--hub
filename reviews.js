@@ -51,9 +51,18 @@ const data = doc.data();
 
 container.innerHTML += `
 <div class="bg-white p-8 rounded-3xl shadow min-w-[320px]">
-<img src="${data.photo}" class="w-16 h-16 rounded-full mb-4">
-<p class="italic">"${data.review}"</p>
-<div class="mt-6 font-semibold">${data.name}</div>
+
+<img src="${data.photo}"
+class="w-20 h-20 rounded-full mx-auto mb-4">
+
+<p class="italic text-gray-600 text-center">
+"${data.review}"
+</p>
+
+<h3 class="font-bold text-xl text-center mt-4">
+${data.name}
+</h3>
+
 </div>
 `;
 });
