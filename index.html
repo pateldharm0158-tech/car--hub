@@ -68,9 +68,27 @@ Signup
   
 
   <!-- Hero -->
-<section class="hero-bg min-h-screen flex items-center">
-    <div class="max-w-4xl mx-auto px-6 text-center">
+<section class="relative min-h-screen flex items-center overflow-hidden">
+  <section class="relative min-h-screen flex items-center overflow-hidden">
 
+  <video
+    autoplay
+    muted
+    loop
+    playsinline
+    class="absolute inset-0 w-full h-full object-cover z-0">
+    <source src="video_car.mp4" type="video/mp4">
+  </video>
+
+  <div class="absolute inset-0 bg-black/60 z-10"></div>
+
+  <div class="relative z-20 max-w-4xl mx-auto px-6 text-center">
+      <h1>A Collection Built On Trust</h1>
+      ...
+  </div>
+
+</section>
+<div class="relative z-20 max-w-4xl mx-auto px-6 text-center">
         <h1 class="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
             A Collection Built On Trust
         </h1>
