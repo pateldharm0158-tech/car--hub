@@ -271,28 +271,26 @@ background:linear-gradient(
 background-clip:text;
 }
 
-.footer-elite .big-logo{
-  display:block !important;
-  width:100%;
+.price-box{
   text-align:center;
-  margin-top:40px;
+  background:#111;
+  color:white;
+  padding:20px;
+  border-radius:20px;
+  margin:20px auto;
+  max-width:350px;
+  box-shadow:0 10px 30px rgba(0,0,0,.2);
 }
 
-.footer-elite .big-logo h1{
-  font-size:120px !important;
-  line-height:1;
-}
-#carModal{
-  backdrop-filter: blur(8px);
+.price-label{
+  color:#ccc;
+  font-size:14px;
+  display:block;
 }
 
-#carModal .modal{
-  width:100% !important;
-  max-width:100% !important;
-}
-#carModal{
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,0.95);
-  z-index:99999;
+.price-box h2{
+  color:#ef4444;
+  font-size:48px;
+  font-weight:800;
+  margin-top:10px;
 }
