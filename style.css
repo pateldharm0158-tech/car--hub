@@ -307,12 +307,6 @@ font-size:48px !important;
 }
 
 }
-video{
- .hero-section{
-  position:relative;
-  height:700px;
-  overflow:hidden;
-}
 
 .hero-section video{
   position:absolute;
@@ -349,5 +343,64 @@ video{
   .hero-content p{
     font-size:1.2rem !important;
   }
+
+}
+/* HERO SECTION */
+
+.hero-section{
+    position:relative;
+    min-height:100vh;
+    overflow:hidden;
+}
+
+.hero-section video{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center center;
+    z-index:0;
+}
+
+.hero-content{
+    position:relative;
+    z-index:20;
+    padding-top:100px;
+}
+
+@media (max-width:768px){
+
+    .hero-section{
+        min-height:85vh;
+    }
+
+    .hero-content{
+        padding:80px 20px;
+    }
+
+    .hero-content h1{
+        font-size:2.2rem !important;
+        line-height:1.1;
+    }
+
+    .hero-content p{
+        font-size:1rem !important;
+    }
+}
+@media(max-width:768px){
+
+    a[href*="wa.me"]{
+        width:56px !important;
+        height:56px !important;
+        right:12px !important;
+    }
+
+    a[href^="tel:"]{
+        width:56px !important;
+        height:56px !important;
+        right:12px !important;
+    }
 
 }
