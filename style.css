@@ -282,3 +282,11 @@ background-clip:text;
   font-size:120px !important;
   line-height:1;
 }
+#carModal{
+  backdrop-filter: blur(8px);
+}
+
+#carModal .modal{
+  width:95%;
+  max-width:1400px;
+}
