@@ -414,3 +414,11 @@ font-size:48px !important;
     }
 
 }
+
+@media (max-width:768px){
+
+  .hero-section{
+    min-height:70vh !important;
+  }
+
+}
