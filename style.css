@@ -270,3 +270,15 @@ background:linear-gradient(
 -webkit-text-fill-color:transparent;
 background-clip:text;
 }
+
+.footer-elite .big-logo{
+  display:block !important;
+  width:100%;
+  text-align:center;
+  margin-top:40px;
+}
+
+.footer-elite .big-logo h1{
+  font-size:120px !important;
+  line-height:1;
+}
