@@ -325,27 +325,7 @@ font-size:48px !important;
   padding-top:120px;
 }
 
-@media (max-width:768px){
 
-  .hero-section{
-  height:700px;
-}
-
-  .hero-section video{
-    object-fit:cover;
-    object-position:center center;
-  }
-
-  .hero-content h1{
-    font-size:2.5rem !important;
-    line-height:1.1;
-  }
-
-  .hero-content p{
-    font-size:1.2rem !important;
-  }
-
-}
 /* HERO SECTION */
 
 .hero-section{
@@ -364,15 +344,7 @@ font-size:48px !important;
     object-position:center center;
     z-index:0;
 }
-@media (max-width:768px){
 
-  video{
-    object-fit:contain !important;
-    object-position:center center;
-    background:black;
-  }
-
-}
 
 .hero-content{
     position:relative;
@@ -414,11 +386,28 @@ font-size:48px !important;
     }
 
 }
-
 @media (max-width:768px){
 
   .hero-section{
-    min-height:20vh !important;
+    min-height:100vh !important;
+  }
+
+  .hero-section video{
+    object-fit:cover !important;
+    object-position:center center !important;
+  }
+
+  .hero-content{
+    padding:0 20px;
+  }
+
+  .hero-content h1{
+    font-size:3rem !important;
+    line-height:1.1;
+  }
+
+  .hero-content p{
+    font-size:1.3rem !important;
   }
 
 }
