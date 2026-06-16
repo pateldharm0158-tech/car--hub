@@ -270,27 +270,3 @@ background:linear-gradient(
 -webkit-text-fill-color:transparent;
 background-clip:text;
 }
-
-.price-box{
-  text-align:center;
-  background:#111;
-  color:white;
-  padding:20px;
-  border-radius:20px;
-  margin:20px auto;
-  max-width:350px;
-  box-shadow:0 10px 30px rgba(0,0,0,.2);
-}
-
-.price-label{
-  color:#ccc;
-  font-size:14px;
-  display:block;
-}
-
-.price-box h2{
-  color:#ef4444;
-  font-size:48px;
-  font-weight:800;
-  margin-top:10px;
-}
