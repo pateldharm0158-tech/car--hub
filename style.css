@@ -314,16 +314,10 @@ video{
   width:100%;
   height:100%;
   object-fit:cover;
+  object-position:center center;
   z-index:0;
 }
-@media (max-width:768px){
 
-  video{
-    object-fit:contain;
-    background:black;
-  }
-
-}
 
 .hero-section{
   position:relative;
@@ -335,15 +329,11 @@ video{
   position:relative;
   z-index:2;
 }
+}
 @media (max-width:768px){
 
   .hero-section{
-    min-height:85vh;
-  }
-
-  .hero-content{
-    padding:0 20px;
-    margin-top:-80px;
+    min-height:100vh;
   }
 
   .hero-content h1{
@@ -353,15 +343,6 @@ video{
 
   .hero-content p{
     font-size:1.4rem !important;
-  }
-
-  .hero-content a{
-    padding:14px 40px !important;
-    font-size:1.2rem !important;
-  }
-
-  video{
-    object-position:center center;
   }
 
 }
