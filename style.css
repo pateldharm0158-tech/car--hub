@@ -281,3 +281,7 @@ font-size:3rem !important;
 }
 
 }
+#carModal{
+background: rgba(0,0,0,0.9);
+z-index:99999;
+}
