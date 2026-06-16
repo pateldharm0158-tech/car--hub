@@ -293,3 +293,31 @@ background-clip:text;
   font-weight:800;
   margin-top:10px;
 }
+/* Premium Car Detail Cards */
+
+#carModal .bg-gray-50.rounded-2xl{
+border:1px solid #e5e7eb;
+transition:0.3s;
+}
+
+#carModal .bg-gray-50.rounded-2xl:hover{
+transform:translateY(-5px);
+box-shadow:0 15px 30px rgba(0,0,0,0.10);
+}
+
+#carModal h3{
+letter-spacing:-1px;
+}
+
+#modal-price{
+font-size:80px !important;
+font-weight:900 !important;
+}
+
+@media(max-width:768px){
+
+#modal-price{
+font-size:48px !important;
+}
+
+}
