@@ -253,7 +253,7 @@ overflow:hidden;
 }
 
 .mt-16.footer-elite .big-logo h1{
-font-size:80px !important;
+font-size:150px !important;
 font-weight:900;
 line-height:1;
 margin:0;
@@ -269,19 +269,4 @@ background:linear-gradient(
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
 background-clip:text;
-}
-@media(max-width:768px){
-
-#carModal .grid-cols-3{
-grid-template-columns:1fr !important;
-}
-
-#modal-price{
-font-size:3rem !important;
-}
-
-}
-#carModal{
-background: rgba(0,0,0,0.9);
-z-index:99999;
 }
