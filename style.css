@@ -316,6 +316,14 @@ video{
   object-fit:cover;
   z-index:0;
 }
+@media (max-width:768px){
+
+  video{
+    object-fit:contain;
+    background:black;
+  }
+
+}
 
 .hero-section{
   position:relative;
