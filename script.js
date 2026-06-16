@@ -533,7 +533,8 @@ class="mt-4 bg-red-600 text-white px-4 py-2 rounded-lg wishlist-btn">
       `).join('');
 
       document.getElementById('carModal').classList.remove('hidden');
-        renderRelatedCars(id);
+document.body.style.overflow = "hidden";
+renderRelatedCars(id);
       
       // Reset sliders based on car price
       const price = currentCar.numericPrice;
@@ -592,7 +593,9 @@ function startAutoSlide() {
   document.querySelector('a[href*="wa.me"]').style.display = "flex";
   document.querySelector('a[href*="tel:"]').style.display = "flex";
 
-  document.getElementById('carModal').classList.add('hidden');
+document.getElementById('carModal').classList.add('hidden');
+document.body.style.overflow = "auto";
+       
 }
     // Fixed & Linked EMI Calculator
     function updateEMI(type = '') {
