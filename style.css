@@ -270,32 +270,14 @@ background:linear-gradient(
 -webkit-text-fill-color:transparent;
 background-clip:text;
 }
-/* Premium Car Details */
-
-#carModal .bg-gray-50.rounded-2xl{
-border:1px solid #e5e7eb;
-transition:all 0.3s ease;
-}
-
-#carModal .bg-gray-50.rounded-2xl:hover{
-transform:translateY(-5px);
-box-shadow:0 15px 30px rgba(0,0,0,0.10);
-}
-
-#modal-price{
-font-size:80px !important;
-font-weight:900 !important;
-line-height:1;
-}
-
-#carModal h3{
-letter-spacing:-1px;
-}
-
 @media(max-width:768px){
 
+#carModal .grid-cols-3{
+grid-template-columns:1fr !important;
+}
+
 #modal-price{
-font-size:48px !important;
+font-size:3rem !important;
 }
 
 }
