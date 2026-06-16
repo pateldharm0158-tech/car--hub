@@ -318,17 +318,6 @@ font-size:48px !important;
   z-index:0;
 }
 
-@media (max-width:768px){
-
-  video{
-    object-fit:contain !important;
-    object-position:center center;
-    background:black;
-  }
-
-}
-
-
 
 .hero-content{
   position:relative;
@@ -374,6 +363,15 @@ font-size:48px !important;
     object-fit:cover;
     object-position:center center;
     z-index:0;
+}
+@media (max-width:768px){
+
+  video{
+    object-fit:contain !important;
+    object-position:center center;
+    background:black;
+  }
+
 }
 
 .hero-content{
