@@ -69,7 +69,6 @@ Signup
 
   <!-- Hero -->
 <section class="relative min-h-screen flex items-center overflow-hidden">
-  <section class="relative min-h-screen flex items-center overflow-hidden">
 
   <video
     autoplay
@@ -83,26 +82,20 @@ Signup
   <div class="absolute inset-0 bg-black/60 z-10"></div>
 
   <div class="relative z-20 max-w-4xl mx-auto px-6 text-center">
-      <h1>A Collection Built On Trust</h1>
-      ...
+      <h1 class="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
+          A Collection Built On Trust
+      </h1>
+
+      <p class="text-white text-xl md:text-2xl mb-10">
+          Handpicked Premium Pre-Owned Cars in Gujarat
+      </p>
+
+      <button onclick="document.getElementById('cars-section').scrollIntoView({behavior:'smooth'})"
+          class="bg-red-600 px-12 py-5 rounded-full text-xl font-semibold hover:bg-red-700">
+          View All Cars
+      </button>
   </div>
 
-</section>
-<div class="relative z-20 max-w-4xl mx-auto px-6 text-center">
-        <h1 class="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
-            A Collection Built On Trust
-        </h1>
-
-        <p class="text-white text-xl md:text-2xl mb-10">
-            Handpicked Premium Pre-Owned Cars in Gujarat
-        </p>
-
-        <button onclick="document.getElementById('cars-section').scrollIntoView({behavior:'smooth'})"
-            class="bg-red-600 px-12 py-5 rounded-full text-xl font-semibold hover:bg-red-700">
-            View All Cars
-        </button>
-
-    </div>
 </section>
 
   <!-- Cars Section -->
@@ -625,7 +618,7 @@ Quick Links
 <ul class="space-y-3 text-gray-400">
 <li><a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'})">Home</a></li>
 <li><a href="#cars-section">Cars</a></li>
-<li><a href="#contact">Contact</a></li>
+<li><a href="contact.html"">Contact</a></li>
 <li><a href="tel:+919328216168">Sell Car</a></li>
 </ul>
 </div>
