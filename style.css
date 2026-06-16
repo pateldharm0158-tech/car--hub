@@ -318,6 +318,18 @@ font-size:48px !important;
   z-index:0;
 }
 
+@media (max-width:768px){
+
+  video{
+    object-fit:contain !important;
+    object-position:center center;
+    background:black;
+  }
+
+}
+
+
+
 .hero-content{
   position:relative;
   z-index:20;
