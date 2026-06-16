@@ -287,6 +287,12 @@ background-clip:text;
 }
 
 #carModal .modal{
-  width:95%;
-  max-width:1400px;
+  width:100% !important;
+  max-width:100% !important;
+}
+#carModal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.95);
+  z-index:99999;
 }
