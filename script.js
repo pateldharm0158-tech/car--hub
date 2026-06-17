@@ -918,84 +918,74 @@ document
 function closePopup(){
   document.getElementById("welcomePopup").style.display = "none";
 }
-async function downloadCarPDF(){
 
-const element = document.getElementById("pdfContent");
-
-const canvas = await html2canvas(element,{
-  scale:2,
-  useCORS:true,
-  scrollY:-window.scrollY,
-  windowWidth:element.scrollWidth,
-  windowHeight:element.scrollHeight
-});
-
-const imgData = canvas.toDataURL("image/png");
+async function downloadCarPDF() {
 
 const { jsPDF } = window.jspdf;
 
-const pdf = new jsPDF("p","mm","a4");
+const pdf = new jsPDF();
 
-const pdfWidth = 210;
-const pdfHeight = 297;
+pdf.setFontSize(24);
+pdf.text("MAGNETO CARSZ",20,20);
 
-const imgWidth = pdfWidth;
-const imgHeight = (canvas.height * imgWidth) / canvas.width;
-
-let heightLeft = imgHeight;
-let position = 0;
-
-pdf.addImage(
-  imgData,
-  "PNG",
-  0,
-  position,
-  imgWidth,
-  imgHeight
+pdf.setFontSize(18);
+pdf.text(
+document.getElementById("modal-car-name").innerText,
+20,
+40
 );
 
-heightLeft -= pdfHeight;
+pdf.setFontSize(14);
+pdf.text(
+"Price : " +
+document.getElementById("modal-price").innerText,
+20,
+60
+);
 
-while(heightLeft > 0){
+pdf.text(
+"Fuel : " +
+document.getElementById("detail-fuel").innerText,
+20,
+80
+);
 
-  position = heightLeft - imgHeight;
+pdf.text(
+"Transmission : " +
+document.getElementById("detail-transmission").innerText,
+20,
+100
+);
 
-  pdf.addPage();
+pdf.text(
+"RTO : " +
+document.getElementById("detail-rto").innerText,
+20,
+120
+);
 
-  pdf.addImage(
-    imgData,
-    "PNG",
-    0,
-    position,
-    imgWidth,
-    imgHeight
-  );
+pdf.text(
+"Ownership : " +
+document.getElementById("detail-owner").innerText,
+20,
+140
+);
 
-  heightLeft -= pdfHeight;
-}
+pdf.text(
+"Driven : " +
+document.getElementById("detail-driven").innerText,
+20,
+160
+);
+
+pdf.text(
+"Contact : +91 93282 16168",
+20,
+190
+);
 
 pdf.save(
 document.getElementById("modal-car-name").innerText + ".pdf"
 );
-
-}
-function shareCar(){
-
-const carName =
-document.getElementById("modal-car-name").innerText;
-
-if(navigator.share){
-
-navigator.share({
-title: carName,
-text: "Check out " + carName + " on Magneto Carsz",
-url: window.location.href
-});
-
-}else{
-
-downloadCarPDF();
-
-}
 
 }
