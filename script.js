@@ -461,7 +461,7 @@ class="w-full h-48 sm:h-56 object-cover">
 
 ${car.offer ? `
 <div class="offer-badge">
-LIMITED OFFER
+🔥 LIMITED OFFER
 </div>
 ` : ""}
 
