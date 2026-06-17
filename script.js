@@ -989,3 +989,21 @@ document.getElementById("modal-car-name").innerText + ".pdf"
 );
 
 }
+function shareCar() {
+
+  if (navigator.share) {
+
+    navigator.share({
+      title: document.getElementById("modal-car-name").innerText,
+      text: "Check out this car on Magneto Carsz",
+      url: window.location.href
+    });
+
+  } else {
+
+    navigator.clipboard.writeText(window.location.href);
+    alert("Link Copied!");
+
+  }
+
+}
