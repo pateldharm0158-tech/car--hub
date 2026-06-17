@@ -860,6 +860,40 @@ ${car.price}
 `).join('');
 }
 function shareWebsite() {
+
+    document.getElementById("shareCarBtn").addEventListener("click", () => {
+
+const shareText =
+`${selectedCar.name}
+
+Price: ${selectedCar.price}
+
+Fuel: ${selectedCar.fuel}
+Transmission: ${selectedCar.transmission}
+RTO: ${selectedCar.rto}
+
+View More:
+https://pateldharm0158-tech.github.io/car--hub/`;
+
+if(navigator.share){
+
+navigator.share({
+title:selectedCar.name,
+text:shareText
+});
+
+}else{
+
+navigator.clipboard.writeText(shareText);
+
+alert("Car details copied!");
+}
+
+});
+
+
+
+    
   if (navigator.share) {
     navigator.share({
       title: "Magneto Carsz",
