@@ -921,80 +921,46 @@ function closePopup(){
 
 async function downloadCarPDF() {
 
-const { jsPDF } = window.jspdf;
+  const { jsPDF } = window.jspdf;
 
-const pdf = new jsPDF();
+  const content = document.getElementById("pdfContent");
 
-pdf.setFontSize(24);
-pdf.text("MAGNETO CARSZ",20,20);
+  const canvas = await html2canvas(content,{
+    scale:2,
+    useCORS:true
+  });
 
-pdf.setFontSize(18);
-pdf.text(
-document.getElementById("modal-car-name").innerText,
-20,
-40
-);
+  const imgData = canvas.toDataURL("image/png");
 
-pdf.setFontSize(14);
-pdf.text(
-"Price : " +
-document.getElementById("modal-price").innerText,
-20,
-60
-);
+  const pdf = new jsPDF("p","mm","a4");
 
-pdf.text(
-"Fuel : " +
-document.getElementById("detail-fuel").innerText,
-20,
-80
-);
+  const pdfWidth = 210;
+  const pdfHeight = (canvas.height * pdfWidth) / canvas.width;
 
-pdf.text(
-"Transmission : " +
-document.getElementById("detail-transmission").innerText,
-20,
-100
-);
+  pdf.addImage(
+    imgData,
+    "PNG",
+    0,
+    0,
+    pdfWidth,
+    pdfHeight
+  );
 
-pdf.text(
-"RTO : " +
-document.getElementById("detail-rto").innerText,
-20,
-120
-);
+  const pdfBlob = pdf.output("blob");
 
-pdf.text(
-"Ownership : " +
-document.getElementById("detail-owner").innerText,
-20,
-140
-);
+  const file = new File(
+    [pdfBlob],
+    document.getElementById("modal-car-name").innerText + ".pdf",
+    { type:"application/pdf" }
+  );
 
-pdf.text(
-"Driven : " +
-document.getElementById("detail-driven").innerText,
-20,
-160
-);
-
-pdf.text(
-"Contact : +91 93282 16168",
-20,
-190
-);
-
-const pdfBlob = pdf.output("blob");
-
-const file = new File(
-  [pdfBlob],
-  document.getElementById("modal-car-name").innerText + ".pdf",
-  { type: "application/pdf" }
-);
-
-return file;
-
+  return file;
 }
+
+
+
+
+
 async function shareCar() {
 
   const pdfFile = await downloadCarPDF();
