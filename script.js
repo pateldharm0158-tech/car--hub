@@ -859,27 +859,31 @@ ${car.price}
 
 `).join('');
 }
-function shareWebsite() {
+function shareCar(){
 
-    document.getElementById("shareCarBtn").addEventListener("click", () => {
+if(!currentCar){
+alert("Open a car first");
+return;
+}
 
-const shareText =
-`${selectedCar.name}
+const shareText = `
+${currentCar.name}
 
-Price: ${selectedCar.price}
+Price: ${currentCar.price}
+Fuel: ${currentCar.fuel}
+Transmission: ${currentCar.trans}
+Driven: ${currentCar.driven}
+RTO: ${currentCar.rto}
 
-Fuel: ${selectedCar.fuel}
-Transmission: ${selectedCar.transmission}
-RTO: ${selectedCar.rto}
-
-View More:
-https://pateldharm0158-tech.github.io/car--hub/`;
+Website:
+https://pateldharm0158-tech.github.io/car--hub/
+`;
 
 if(navigator.share){
 
 navigator.share({
-title:selectedCar.name,
-text:shareText
+title: currentCar.name,
+text: shareText
 });
 
 }else{
@@ -889,23 +893,7 @@ navigator.clipboard.writeText(shareText);
 alert("Car details copied!");
 }
 
-});
-
-
-
-    
-  if (navigator.share) {
-    navigator.share({
-      title: "Magneto Carsz",
-      text: "Check out premium pre-owned cars at Magneto Carsz",
-      url: window.location.href
-    });
-  } else {
-    navigator.clipboard.writeText(window.location.href);
-    alert("Website link copied!");
-  }
 }
-
 function filterBrand(brand){
 
 const filteredCars = cars.filter(car =>
