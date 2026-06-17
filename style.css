@@ -484,14 +484,14 @@ font-size:48px !important;
 }
 .offer-badge{
 position:absolute;
-bottom:10px;
-right:10px;
+bottom:0;
+right:0;
 background:#dc2626;
 color:white;
 padding:8px 15px;
 font-size:12px;
 font-weight:700;
-border-radius:20px;
+border-radius:15px 0 0 0;
 z-index:10;
 text-transform:uppercase;
 letter-spacing:1px;
