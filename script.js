@@ -918,3 +918,74 @@ document
 function closePopup(){
   document.getElementById("welcomePopup").style.display = "none";
 }
+
+async function downloadCarPDF() {
+
+const { jsPDF } = window.jspdf;
+
+const pdf = new jsPDF();
+
+pdf.setFontSize(24);
+pdf.text("MAGNETO CARSZ",20,20);
+
+pdf.setFontSize(18);
+pdf.text(
+document.getElementById("modal-car-name").innerText,
+20,
+40
+);
+
+pdf.setFontSize(14);
+pdf.text(
+"Price : " +
+document.getElementById("modal-price").innerText,
+20,
+60
+);
+
+pdf.text(
+"Fuel : " +
+document.getElementById("detail-fuel").innerText,
+20,
+80
+);
+
+pdf.text(
+"Transmission : " +
+document.getElementById("detail-transmission").innerText,
+20,
+100
+);
+
+pdf.text(
+"RTO : " +
+document.getElementById("detail-rto").innerText,
+20,
+120
+);
+
+pdf.text(
+"Ownership : " +
+document.getElementById("detail-owner").innerText,
+20,
+140
+);
+
+pdf.text(
+"Driven : " +
+document.getElementById("detail-driven").innerText,
+20,
+160
+);
+
+pdf.text(
+"Contact : +91 93282 16168",
+20,
+190
+);
+
+pdf.save(
+document.getElementById("modal-car-name").innerText + ".pdf"
+);
+
+}
