@@ -920,41 +920,62 @@ function closePopup(){
 }
 async function downloadCarPDF(){
 
-const element =
-document.getElementById("pdfContent");
+const element = document.getElementById("pdfContent");
 
-const canvas =
-await html2canvas(element,{
-scale:2
+const canvas = await html2canvas(element,{
+  scale:2,
+  useCORS:true,
+  scrollY:-window.scrollY,
+  windowWidth:element.scrollWidth,
+  windowHeight:element.scrollHeight
 });
 
-const imgData =
-canvas.toDataURL("image/png");
+const imgData = canvas.toDataURL("image/png");
 
 const { jsPDF } = window.jspdf;
 
-const pdf =
-new jsPDF("p","mm","a4");
+const pdf = new jsPDF("p","mm","a4");
 
-const pdfWidth =
-pdf.internal.pageSize.getWidth();
+const pdfWidth = 210;
+const pdfHeight = 297;
 
-const pdfHeight =
-(canvas.height * pdfWidth) /
-canvas.width;
+const imgWidth = pdfWidth;
+const imgHeight = (canvas.height * imgWidth) / canvas.width;
+
+let heightLeft = imgHeight;
+let position = 0;
 
 pdf.addImage(
-imgData,
-"PNG",
-0,
-0,
-pdfWidth,
-pdfHeight
+  imgData,
+  "PNG",
+  0,
+  position,
+  imgWidth,
+  imgHeight
 );
 
+heightLeft -= pdfHeight;
+
+while(heightLeft > 0){
+
+  position = heightLeft - imgHeight;
+
+  pdf.addPage();
+
+  pdf.addImage(
+    imgData,
+    "PNG",
+    0,
+    position,
+    imgWidth,
+    imgHeight
+  );
+
+  heightLeft -= pdfHeight;
+}
+
 pdf.save(
-document.getElementById("modal-car-name").innerText +
-".pdf"
+document.getElementById("modal-car-name").innerText + ".pdf"
 );
 
 }
