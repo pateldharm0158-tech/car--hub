@@ -984,25 +984,31 @@ pdf.text(
 190
 );
 
-pdf.save(
-document.getElementById("modal-car-name").innerText + ".pdf"
+const pdfBlob = pdf.output("blob");
+
+const file = new File(
+  [pdfBlob],
+  document.getElementById("modal-car-name").innerText + ".pdf",
+  { type: "application/pdf" }
 );
 
+return file;
+
 }
-function shareCar() {
+async function shareCar() {
+
+  const pdfFile = await downloadCarPDF();
 
   if (navigator.share) {
 
-    navigator.share({
+    await navigator.share({
       title: document.getElementById("modal-car-name").innerText,
-      text: "Check out this car on Magneto Carsz",
-      url: window.location.href
+      files: [pdfFile]
     });
 
   } else {
 
-    navigator.clipboard.writeText(window.location.href);
-    alert("Link Copied!");
+    alert("Sharing not supported on this device");
 
   }
 
