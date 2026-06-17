@@ -918,74 +918,43 @@ document
 function closePopup(){
   document.getElementById("welcomePopup").style.display = "none";
 }
+async function downloadCarPDF(){
 
-async function downloadCarPDF() {
+const element =
+document.getElementById("pdfContent");
+
+const canvas =
+await html2canvas(element,{
+scale:2
+});
+
+const imgData =
+canvas.toDataURL("image/png");
 
 const { jsPDF } = window.jspdf;
 
-const pdf = new jsPDF();
+const pdf =
+new jsPDF("p","mm","a4");
 
-pdf.setFontSize(24);
-pdf.text("MAGNETO CARSZ",20,20);
+const pdfWidth =
+pdf.internal.pageSize.getWidth();
 
-pdf.setFontSize(18);
-pdf.text(
-document.getElementById("modal-car-name").innerText,
-20,
-40
-);
+const pdfHeight =
+(canvas.height * pdfWidth) /
+canvas.width;
 
-pdf.setFontSize(14);
-pdf.text(
-"Price : " +
-document.getElementById("modal-price").innerText,
-20,
-60
-);
-
-pdf.text(
-"Fuel : " +
-document.getElementById("detail-fuel").innerText,
-20,
-80
-);
-
-pdf.text(
-"Transmission : " +
-document.getElementById("detail-transmission").innerText,
-20,
-100
-);
-
-pdf.text(
-"RTO : " +
-document.getElementById("detail-rto").innerText,
-20,
-120
-);
-
-pdf.text(
-"Ownership : " +
-document.getElementById("detail-owner").innerText,
-20,
-140
-);
-
-pdf.text(
-"Driven : " +
-document.getElementById("detail-driven").innerText,
-20,
-160
-);
-
-pdf.text(
-"Contact : +91 93282 16168",
-20,
-190
+pdf.addImage(
+imgData,
+"PNG",
+0,
+0,
+pdfWidth,
+pdfHeight
 );
 
 pdf.save(
-document.getElementById("modal-car-name").innerText + ".pdf"
+document.getElementById("modal-car-name").innerText +
+".pdf"
 );
 
 }
