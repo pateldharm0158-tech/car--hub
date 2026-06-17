@@ -3,37 +3,39 @@
 <head>
 <title>Signup - Magneto Carsz</title>
 <script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-black flex justify-center items-center min-h-screen">
+<body class="login-page">
 
-<div class="bg-white p-8 rounded-xl w-96">
+<video autoplay muted loop playsinline class="bg-video">
+  <source src="video_car.mp4" type="video/mp4">
+</video>
 
-<h1 class="text-3xl font-bold mb-6 text-center">
+<div class="overlay"></div>
+
+<div class="signup-container">
+
+<h1 class="text-4xl font-bold mb-6 text-center text-white">
 Signup
 </h1>
 
-<input id="email" type="email" placeholder="Email"
-class="border w-full p-3 mb-4 rounded">
+<input id="email" type="email" placeholder="Email">
 
-<input id="password" type="password" placeholder="Password"
-class="border w-full p-3 mb-4 rounded">
+<input id="password" type="password" placeholder="Password">
 
-<button id="signupBtn"
-class="bg-red-600 text-white w-full p-3 rounded">
+<button id="signupBtn">
 Create Account
 </button>
 
-<p class="mt-4 text-center">
+<p class="mt-4 text-center text-white">
 Already have account?
-<a href="login.html" class="text-red-600">
+<a href="login.html" class="text-red-500">
 Login
 </a>
 </p>
 
 </div>
-
-<script type="module">
 
 import {
 auth,
