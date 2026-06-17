@@ -15,6 +15,7 @@ driven: "1,00,000 km",
 rto: "GJ 05",
 insurance: "2027",
 color:"Black",
+offer:true,
 images: [
   "xuv700/xuv 5.png",
   "xuv700/xuv 2.png",
