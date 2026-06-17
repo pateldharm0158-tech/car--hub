@@ -960,10 +960,12 @@ async function downloadCarPDF(){
 const element = document.getElementById("pdfContent");
 
 const canvas = await html2canvas(element,{
-  scale:2,
+  scale:4,
   useCORS:true,
+  backgroundColor:"#ffffff",
   scrollY:-window.scrollY,
-  windowWidth:element.scrollWidth,
+  scrollX:0,
+  windowWidth:1200,
   windowHeight:element.scrollHeight
 });
 
@@ -976,7 +978,7 @@ const pdf = new jsPDF("p","mm","a4");
 const pdfWidth = 210;
 const pdfHeight = 297;
 
-const imgWidth = pdfWidth;
+const imgWidth = 190;
 const imgHeight = (canvas.height * imgWidth) / canvas.width;
 
 let heightLeft = imgHeight;
@@ -985,7 +987,7 @@ let position = 0;
 pdf.addImage(
   imgData,
   "PNG",
-  0,
+  10,
   position,
   imgWidth,
   imgHeight
@@ -1002,7 +1004,7 @@ while(heightLeft > 0){
   pdf.addImage(
     imgData,
     "PNG",
-    0,
+    10,
     position,
     imgWidth,
     imgHeight
