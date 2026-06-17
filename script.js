@@ -921,141 +921,71 @@ function closePopup(){
 
 async function downloadCarPDF() {
 
-  const { jsPDF } = window.jspdf;
+const { jsPDF } = window.jspdf;
 
-  const pdf = new jsPDF("p", "mm", "a4");
+const pdf = new jsPDF();
 
-  const carName =
-    document.getElementById("modal-car-name").innerText;
+pdf.setFontSize(24);
+pdf.text("MAGNETO CARSZ",20,20);
 
-  const price =
-    document.getElementById("modal-price").innerText;
+pdf.setFontSize(18);
+pdf.text(
+document.getElementById("modal-car-name").innerText,
+20,
+40
+);
 
-  const makeYear =
-    document.getElementById("detail-makeyear").innerText;
+pdf.setFontSize(14);
+pdf.text(
+"Price : " +
+document.getElementById("modal-price").innerText,
+20,
+60
+);
 
-  const regYear =
-    document.getElementById("detail-regyear").innerText;
+pdf.text(
+"Fuel : " +
+document.getElementById("detail-fuel").innerText,
+20,
+80
+);
 
-  const owner =
-    document.getElementById("detail-owner").innerText;
+pdf.text(
+"Transmission : " +
+document.getElementById("detail-transmission").innerText,
+20,
+100
+);
 
-  const fuel =
-    document.getElementById("detail-fuel").innerText;
+pdf.text(
+"RTO : " +
+document.getElementById("detail-rto").innerText,
+20,
+120
+);
 
-  const driven =
-    document.getElementById("detail-driven").innerText;
+pdf.text(
+"Ownership : " +
+document.getElementById("detail-owner").innerText,
+20,
+140
+);
 
-  const rto =
-    document.getElementById("detail-rto").innerText;
+pdf.text(
+"Driven : " +
+document.getElementById("detail-driven").innerText,
+20,
+160
+);
 
-  const transmission =
-    document.getElementById("detail-transmission").innerText;
+pdf.text(
+"Contact : +91 93282 16168",
+20,
+190
+);
 
-  const insurance =
-    document.getElementById("detail-insurance").innerText;
-
-  const color =
-    document.getElementById("detail-color").innerText;
-
-  // PAGE 1
-
-  pdf.setFontSize(26);
-  pdf.text("MAGNETO CARSZ", 20, 20);
-
-  pdf.setFontSize(18);
-  pdf.text(carName, 20, 35);
-
-  pdf.setTextColor(220, 38, 38);
-  pdf.setFontSize(24);
-  pdf.text(price, 20, 50);
-
-  pdf.setTextColor(0, 0, 0);
-
-  const image = document.getElementById("main-image");
-
-  try {
-
-    const canvas = document.createElement("canvas");
-    const ctx = canvas.getContext("2d");
-
-    canvas.width = image.naturalWidth;
-    canvas.height = image.naturalHeight;
-
-    ctx.drawImage(image, 0, 0);
-
-    const imgData = canvas.toDataURL("image/jpeg");
-
-    pdf.addImage(
-      imgData,
-      "JPEG",
-      15,
-      60,
-      180,
-      100
-    );
-
-  } catch(err) {
-    console.log(err);
-  }
-
-  // PAGE 2
-
-  pdf.addPage();
-
-  pdf.setFontSize(22);
-  pdf.text("Vehicle Details", 20, 20);
-
-  pdf.setFontSize(14);
-
-  pdf.text("Make Year : " + makeYear, 20, 40);
-  pdf.text("Registration Year : " + regYear, 20, 55);
-  pdf.text("Ownership : " + owner, 20, 70);
-  pdf.text("Fuel : " + fuel, 20, 85);
-  pdf.text("Driven : " + driven, 20, 100);
-  pdf.text("RTO : " + rto, 20, 115);
-  pdf.text("Transmission : " + transmission, 20, 130);
-  pdf.text("Insurance : " + insurance, 20, 145);
-  pdf.text("Color : " + color, 20, 160);
-
-  pdf.setFontSize(18);
-  pdf.text("Contact Us", 20, 200);
-
-  pdf.setFontSize(14);
-  pdf.text("+91 93282 16168", 20, 215);
-  pdf.text("magnetocarsz@gmail.com", 20, 225);
-  pdf.text("Surat, Gujarat", 20, 235);
-
-  const pdfBlob = pdf.output("blob");
-
-  const file = new File(
-    [pdfBlob],
-    carName + ".pdf",
-    { type: "application/pdf" }
-  );
-
-  return file;
-}
-
-
-
-
-
-async function shareCar() {
-
-  const pdfFile = await downloadCarPDF();
-
-  if (navigator.share) {
-
-    await navigator.share({
-      title: document.getElementById("modal-car-name").innerText,
-      files: [pdfFile]
-    });
-
-  } else {
-
-    alert("Sharing not supported on this device");
-
-  }
+pdf.save(
+document.getElementById("modal-car-name").innerText + ".pdf"
+);
 
 }
