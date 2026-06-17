@@ -923,13 +923,15 @@ async function downloadCarPDF() {
 
   const { jsPDF } = window.jspdf;
 
-  const content = document.getElementById("pdfContent");
+const content = document.querySelector("#carModal .modal");
 
-  const canvas = await html2canvas(content,{
-    scale:2,
-    useCORS:true
-  });
-
+ const canvas = await html2canvas(content,{
+  scale:2,
+  useCORS:true,
+  scrollY:-window.scrollY,
+  windowWidth:content.scrollWidth,
+  windowHeight:content.scrollHeight
+});
   const imgData = canvas.toDataURL("image/png");
 
   const pdf = new jsPDF("p","mm","a4");
