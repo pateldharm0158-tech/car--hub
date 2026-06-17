@@ -979,3 +979,23 @@ document.getElementById("modal-car-name").innerText + ".pdf"
 );
 
 }
+function shareCar(){
+
+const carName =
+document.getElementById("modal-car-name").innerText;
+
+if(navigator.share){
+
+navigator.share({
+title: carName,
+text: "Check out " + carName + " on Magneto Carsz",
+url: window.location.href
+});
+
+}else{
+
+downloadCarPDF();
+
+}
+
+}
