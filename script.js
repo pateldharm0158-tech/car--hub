@@ -855,6 +855,37 @@ function shareWebsite() {
     alert("Website link copied!");
   }
 }
+
+function filterBrand(brand){
+
+const filteredCars = cars.filter(car =>
+car.name.toLowerCase().includes(brand.toLowerCase())
+);
+
+const grid = document.getElementById("car-grid");
+
+grid.innerHTML = filteredCars.map(car => `
+<div onclick="openCarModal(${car.id})"
+class="car-card bg-white rounded-3xl overflow-hidden cursor-pointer">
+
+<img src="${car.img}"
+class="w-full h-48 object-cover">
+
+<div class="p-4">
+<h3 class="font-bold">${car.name}</h3>
+<p class="text-red-600 font-bold">${car.price}</p>
+</div>
+
+</div>
+`).join('');
+
+document.getElementById('cars-section')
+.scrollIntoView({behavior:'smooth'});
+}
+
+
+
+
     
     
     window.onload = () => {
