@@ -471,3 +471,14 @@ font-size:48px !important;
   border-radius:10px;
   font-weight:bold;
 }
+
+
+@media(max-width:768px){
+
+  .login-container,
+  .signup-container{
+    width:90%;
+    padding:25px;
+  }
+
+}
