@@ -876,7 +876,7 @@ Driven: ${currentCar.driven}
 RTO: ${currentCar.rto}
 
 Website:
-https://pateldharm0158-tech.github.io/car--hub/
+https://pateldharm0158-tech.github.io/car--hub/?car=${currentCar.id}
 `;
 
 if(navigator.share){
@@ -926,10 +926,24 @@ document.getElementById('cars-section')
 
     
     
-    window.onload = () => {
-      renderCars();
-      renderFAQ();
-    };
+  window.onload = () => {
+
+  renderCars();
+  renderFAQ();
+
+  const params = new URLSearchParams(window.location.search);
+
+  const carId = params.get("car");
+
+  if(carId){
+
+    setTimeout(() => {
+      openCarModal(parseInt(carId));
+    }, 500);
+
+  }
+
+};
 function toggleMenu(){
 
 document
