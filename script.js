@@ -923,37 +923,115 @@ async function downloadCarPDF() {
 
   const { jsPDF } = window.jspdf;
 
-const content = document.querySelector("#carModal .modal");
+  const pdf = new jsPDF("p", "mm", "a4");
 
- const canvas = await html2canvas(content,{
-  scale:2,
-  useCORS:true,
-  scrollY:-window.scrollY,
-  windowWidth:content.scrollWidth,
-  windowHeight:content.scrollHeight
-});
-  const imgData = canvas.toDataURL("image/png");
+  const carName =
+    document.getElementById("modal-car-name").innerText;
 
-  const pdf = new jsPDF("p","mm","a4");
+  const price =
+    document.getElementById("modal-price").innerText;
 
-  const pdfWidth = 210;
-  const pdfHeight = (canvas.height * pdfWidth) / canvas.width;
+  const makeYear =
+    document.getElementById("detail-makeyear").innerText;
 
-  pdf.addImage(
-    imgData,
-    "PNG",
-    0,
-    0,
-    pdfWidth,
-    pdfHeight
-  );
+  const regYear =
+    document.getElementById("detail-regyear").innerText;
+
+  const owner =
+    document.getElementById("detail-owner").innerText;
+
+  const fuel =
+    document.getElementById("detail-fuel").innerText;
+
+  const driven =
+    document.getElementById("detail-driven").innerText;
+
+  const rto =
+    document.getElementById("detail-rto").innerText;
+
+  const transmission =
+    document.getElementById("detail-transmission").innerText;
+
+  const insurance =
+    document.getElementById("detail-insurance").innerText;
+
+  const color =
+    document.getElementById("detail-color").innerText;
+
+  // PAGE 1
+
+  pdf.setFontSize(26);
+  pdf.text("MAGNETO CARSZ", 20, 20);
+
+  pdf.setFontSize(18);
+  pdf.text(carName, 20, 35);
+
+  pdf.setTextColor(220, 38, 38);
+  pdf.setFontSize(24);
+  pdf.text(price, 20, 50);
+
+  pdf.setTextColor(0, 0, 0);
+
+  const image = document.getElementById("main-image");
+
+  try {
+
+    const canvas = document.createElement("canvas");
+    const ctx = canvas.getContext("2d");
+
+    canvas.width = image.naturalWidth;
+    canvas.height = image.naturalHeight;
+
+    ctx.drawImage(image, 0, 0);
+
+    const imgData = canvas.toDataURL("image/jpeg");
+
+    pdf.addImage(
+      imgData,
+      "JPEG",
+      15,
+      60,
+      180,
+      100
+    );
+
+  } catch(err) {
+    console.log(err);
+  }
+
+  // PAGE 2
+
+  pdf.addPage();
+
+  pdf.setFontSize(22);
+  pdf.text("Vehicle Details", 20, 20);
+
+  pdf.setFontSize(14);
+
+  pdf.text("Make Year : " + makeYear, 20, 40);
+  pdf.text("Registration Year : " + regYear, 20, 55);
+  pdf.text("Ownership : " + owner, 20, 70);
+  pdf.text("Fuel : " + fuel, 20, 85);
+  pdf.text("Driven : " + driven, 20, 100);
+  pdf.text("RTO : " + rto, 20, 115);
+  pdf.text("Transmission : " + transmission, 20, 130);
+  pdf.text("Insurance : " + insurance, 20, 145);
+  pdf.text("Color : " + color, 20, 160);
+
+  pdf.setFontSize(18);
+  pdf.text("Contact Us", 20, 200);
+
+  pdf.setFontSize(14);
+  pdf.text("+91 93282 16168", 20, 215);
+  pdf.text("magnetocarsz@gmail.com", 20, 225);
+  pdf.text("Surat, Gujarat", 20, 235);
 
   const pdfBlob = pdf.output("blob");
 
   const file = new File(
     [pdfBlob],
-    document.getElementById("modal-car-name").innerText + ".pdf",
-    { type:"application/pdf" }
+    carName + ".pdf",
+    { type: "application/pdf" }
   );
 
   return file;
