@@ -73,7 +73,8 @@ images: [
   driven: "70,000 km",
   rto: "GJ 01",
   insurance: "2028",
-    color:"Metal Mustard",
+  color:"Metal Mustard",
+  offer:true,
   images: [
     "triber 2023/triber 9.png",
     "triber 2023/triber 1.png",
@@ -164,7 +165,8 @@ images: [
   driven: "1,20,000 km",
   rto: "GJ 03",
   insurance: "2027",
-      color:"White",
+  color:"White",
+  offer:true,
   images: [
     "innova crysta 2017/innova-2.png",
     "innova crysta 2017/innova-1.png",
@@ -224,7 +226,7 @@ images: [
   rto: "GJ 06",
   insurance: "2029",
   color:"Black",
-
+  offer:true,
   images: [
     "endeavour 2020/endeavour 1.jpeg",
     "endeavour 2020/endeavour 2.jpeg",
@@ -242,7 +244,7 @@ images: [
   name: "2022 Maruti Suzuki Ertiga",
   price: "₹6.90 Lakh",
   numericPrice: 690000,
-
+  
   img: "eartiga 2022/eartiga 4.png",
 
   fuel: "Petrol",
@@ -255,6 +257,7 @@ images: [
   rto: "GJ 023",
   insurance: "2027",
   color:"Silver",
+  offer:true,
   images: [
     "eartiga 2022/eartiga 1.png",
     "eartiga 2022/eartiga 2.png",
@@ -315,6 +318,7 @@ images: [
   rto: "GJ 18",
   insurance: "2028",
    color:"Starry Night",
+   offer:true,
   images: [
     "alcazar 2023/alcazar 1.jpeg",
     "alcazar 2023/alcazar 2.png",
