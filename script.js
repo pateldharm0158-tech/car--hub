@@ -1018,3 +1018,26 @@ document.getElementById("modal-car-name").innerText + ".pdf"
 );
 
 }
+const heroVideo = document.getElementById("heroVideo");
+const heroImage = document.getElementById("heroImage");
+
+if(heroVideo){
+
+heroVideo.addEventListener("ended", () => {
+
+heroVideo.style.display = "none";
+heroImage.style.display = "block";
+
+setTimeout(() => {
+
+heroImage.style.display = "none";
+heroVideo.style.display = "block";
+
+heroVideo.currentTime = 0;
+heroVideo.play();
+
+},3000);
+
+});
+
+}
