@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pateldharm0158-tech.github.io/car--hub/sitemap.xml
