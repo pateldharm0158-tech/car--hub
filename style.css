@@ -80,7 +80,6 @@ transform:scale(0.9);
   min-width:320px;
   flex-shrink:0;
 }
-/* EliteCar Layout */
 
 #main-image{
   width:100%;
@@ -282,7 +281,6 @@ background-clip:text;
   font-weight:800;
   margin-top:10px;
 }
-/* Premium Car Detail Cards */
 
 #carModal .bg-gray-50.rounded-2xl{
 border:1px solid #e5e7eb;
@@ -360,7 +358,6 @@ font-size:48px !important;
   }
 
 }
-/* HERO SECTION */
 
 .hero-section{
     position:relative;
