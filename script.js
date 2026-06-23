@@ -740,7 +740,8 @@ return;
 }
 
 grid.innerHTML = wishlist.map(car => `
-<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+<div onclick="openCarModal(${car.id})"
+class="bg-white rounded-2xl shadow-lg overflow-hidden cursor-pointer">
 
 <img src="${car.img}"
 class="w-full h-60 object-cover">
@@ -756,7 +757,7 @@ ${car.price}
 </p>
 
 <button
-onclick="removeWishlist(${car.id})"
+onclick="event.stopPropagation(); removeWishlist(${car.id})"
 class="mt-4 bg-black text-white px-4 py-2 rounded-lg">
 Remove
 </button>
