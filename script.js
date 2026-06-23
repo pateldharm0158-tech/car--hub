@@ -740,7 +740,7 @@ return;
 }
 
 grid.innerHTML = wishlist.map(car => `
-<div onclick="openCarModal(${car.id})"
+<div onclick="closeWishlist(); openCarModal(${car.id})"
 class="bg-white rounded-2xl shadow-lg overflow-hidden cursor-pointer">
 
 <img src="${car.img}"
