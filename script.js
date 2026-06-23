@@ -778,8 +778,9 @@ function openSearch() {
 
   const grid = document.getElementById("searchCarsGrid");
 
-  grid.innerHTML = cars.map(car => `
-    <div class="bg-white rounded-2xl shadow overflow-hidden">
+ grid.innerHTML = cars.map(car => `
+<div onclick="closeSearch(); openCarModal(${car.id})"
+class="bg-white rounded-2xl shadow overflow-hidden cursor-pointer">
       <img src="${car.img}" class="w-full h-48 object-cover">
       <div class="p-4">
         <h3 class="font-bold">${car.name}</h3>
@@ -801,8 +802,9 @@ function filterCars() {
   );
 
   document.getElementById("searchCarsGrid").innerHTML =
-    filtered.map(car => `
-      <div class="bg-white rounded-2xl shadow overflow-hidden">
+  filtered.map(car => `
+<div onclick="closeSearch(); openCarModal(${car.id})"
+class="bg-white rounded-2xl shadow overflow-hidden cursor-pointer">
         <img src="${car.img}" class="w-full h-48 object-cover">
         <div class="p-4">
           <h3 class="font-bold">${car.name}</h3>
