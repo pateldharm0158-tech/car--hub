@@ -551,7 +551,6 @@ class="mt-4 bg-red-600 text-white px-4 py-2 rounded-lg wishlist-btn">
       document.getElementById('carModal').classList.remove('hidden');
         renderRelatedCars(id);
       
-      // Reset sliders based on car price
       const price = currentCar.numericPrice;
       const defaultDown = Math.round(price * 0.2);
       const defaultLoan = price - defaultDown;
@@ -610,14 +609,12 @@ function startAutoSlide() {
 
   document.getElementById('carModal').classList.add('hidden');
 }
-    // Fixed & Linked EMI Calculator
     function updateEMI(type = '') {
       let loanAmount = parseFloat(document.getElementById('loan-amount').value);
       let downPayment = parseFloat(document.getElementById('down-payment').value);
       const tenureYears = parseFloat(document.getElementById('tenure').value);
       const carPrice = currentCar ? currentCar.numericPrice : 1875000;
 
-      // Link both sliders
       if (type === 'down') {
   loanAmount = carPrice - downPayment;
   document.getElementById('loan-amount').value = loanAmount;
@@ -642,7 +639,6 @@ if (type === 'loan') {
       const totalPayment = emi * tenureMonths;
       const totalInterest = totalPayment - principal;
 
-      // Update displays
       document.getElementById('loan-amount-display').textContent = '₹' + Math.round(loanAmount).toLocaleString('en-IN');
       document.getElementById('down-payment-display').textContent = '₹' + Math.round(downPayment).toLocaleString('en-IN');
       document.getElementById('tenure-display').textContent = tenureYears + ' years';
@@ -652,12 +648,10 @@ if (type === 'loan') {
       document.getElementById('total-payment').textContent = '₹' + Math.round(totalPayment).toLocaleString('en-IN');
     }
 
-    // Other functions (callNow, bookNow, handleForm, renderFAQ) remain same
     function callNow() { window.location.href = "tel:+919328216168"; }
     function bookNow() { alert("✅ Booking request received!"); }
     function handleForm(e) { e.preventDefault(); alert("✅ Thank you!"); e.target.reset(); }
 
-    // FAQ
     const faqs = [
       {q: "How can I contact Magneto Carsz?", a: "Call us at +91 93282-16168 or WhatsApp anytime."},
       {q: "Do cars come with warranty?", a: "Yes, all cars come with minimum 6 months warranty."},
