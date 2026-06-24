@@ -584,3 +584,24 @@ width:auto !important;
 }
 
 }
+.close-btn{
+position:absolute;
+top:15px;
+right:20px;
+font-size:28px;
+color:white;
+text-decoration:none;
+font-weight:bold;
+z-index:100;
+transition:.3s;
+}
+
+.close-btn:hover{
+color:#ef4444;
+transform:scale(1.2);
+}
+
+.login-container,
+.signup-container{
+position:relative;
+}
