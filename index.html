@@ -196,7 +196,7 @@ class="w-full border p-3 rounded-xl mb-3"></textarea>
 
 <button
 type="button"
-onclick="saveReview()"
+onclick="checkReview()"
 class="bg-red-600 text-white px-6 py-3 rounded-xl">
 Add Review
 </button>
@@ -810,13 +810,13 @@ class="fixed bottom-42 right-6 z-[9999] bg-black text-white w-16 h-16 rounded-fu
 <script type="module" src="reviews.js"></script>
 
 
-  <script>
-function checkSellCar(){
+ <script>
+function checkReview(){
 
 const user = localStorage.getItem("loggedInUser");
 
 if(user){
-window.location.href="sell-car.html";
+saveReview();
 }else{
 alert("Please Login or Signup First.");
 window.location.href="login.html";
@@ -824,6 +824,5 @@ window.location.href="login.html";
 
 }
 </script>
-
 </body>
 </html>
