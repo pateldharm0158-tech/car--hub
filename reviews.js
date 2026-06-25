@@ -7,6 +7,17 @@ getDocs
 
 window.saveReview = async function(){
 
+const user = localStorage.getItem("loggedInUser");
+
+if(!user){
+alert("Please Login or Signup First to add a review.");
+window.location.href = "login.html";
+return;
+}
+
+
+  
+
 const name =
 document.getElementById("reviewName").value;
 
