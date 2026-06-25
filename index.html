@@ -76,7 +76,9 @@ content="https://pateldharm0158-tech.github.io/car--hub/ChatGPT%20Image%20Jun%20
 
   <a href="signup.html" class="hover:text-red-600">Signup</a>
 
-  <a href="sell-car.html" class="hover:text-red-600">Sell a Car</a>
+  <a href="#" onclick="checkSellCar()" class="hover:text-red-600">
+Sell a Car
+</a>
 
   <a href="contact.html" class="hover:text-red-600">Contact us</a>
 </div>
@@ -806,6 +808,22 @@ class="fixed bottom-42 right-6 z-[9999] bg-black text-white w-16 h-16 rounded-fu
 
 <script src="script.js"></script>
 <script type="module" src="reviews.js"></script>
+
+
+  <script>
+function checkSellCar(){
+
+const user = localStorage.getItem("loggedInUser");
+
+if(user){
+window.location.href="sell-car.html";
+}else{
+alert("Please Login or Signup First.");
+window.location.href="login.html";
+}
+
+}
+</script>
 
 </body>
 </html>
