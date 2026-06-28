@@ -507,9 +507,9 @@ EMI: ₹${Math.round(car.numericPrice/120).toLocaleString('en-IN')}/m
 </div>
 
 <button
-onclick="event.stopPropagation(); addToWishlist(${car.id})"
+onclick="event.stopPropagation(); addToWishlist(${car.id}, this)"
 class="mt-4 bg-red-600 text-white px-4 py-2 rounded-lg wishlist-btn">
-❤️ Wishlist
+🤍 Wishlist
 </button>
 
 </div>
