@@ -507,13 +507,9 @@ EMI: ₹${Math.round(car.numericPrice/120).toLocaleString('en-IN')}/m
 </div>
 
 <button
-onclick="event.stopPropagation(); addToWishlist(${car.id})"
+onclick="event.stopPropagation(); addToWishlist(${car.id}, this)"
 class="mt-4 bg-red-600 text-white px-4 py-2 rounded-lg wishlist-btn">
-
-${wishlist.some(item => item.id === car.id)
-? "❤️ Wishlist"
-: "🤍 Wishlist"}
-
+🤍 Wishlist
 </button>
 
 </div>
@@ -714,7 +710,7 @@ function searchCars() {
 
 let wishlist = [];
 
-function addToWishlist(id){
+function addToWishlist(id, button){
 
 const car = cars.find(c => c.id === id);
 
@@ -722,9 +718,13 @@ if(!wishlist.some(item => item.id === id)){
 
 wishlist.push(car);
 
+button.innerHTML = "❤️ Wishlist";
+
 alert(car.name + " added to Wishlist ❤️");
 
 }else{
+
+button.innerHTML = "❤️ Wishlist";
 
 alert("Already in Wishlist");
 
@@ -732,10 +732,7 @@ alert("Already in Wishlist");
 
 showWishlist();
 
-renderCars();
-
 }
-
 function showWishlist(){
 
 document.getElementById("wishlistPage")
