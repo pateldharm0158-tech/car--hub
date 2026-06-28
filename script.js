@@ -507,9 +507,9 @@ EMI: ₹${Math.round(car.numericPrice/120).toLocaleString('en-IN')}/m
 </div>
 
 <button
-onclick="event.stopPropagation(); addToWishlist(${car.id}, this)"
+onclick="event.stopPropagation(); addToWishlist(${car.id})"
 class="mt-4 bg-red-600 text-white px-4 py-2 rounded-lg wishlist-btn">
-🤍 Wishlist
+❤️ Wishlist
 </button>
 
 </div>
@@ -724,14 +724,12 @@ alert(car.name + " added to Wishlist ❤️");
 
 }else{
 
-button.innerHTML = "❤️ Wishlist";
-
 alert("Already in Wishlist");
 
 }
 
-
 }
+
 function showWishlist(){
 
 document.getElementById("wishlistPage")
@@ -936,22 +934,22 @@ document.getElementById('cars-section')
 
     
     
- window.onload = () => {
+  window.onload = () => {
 
-renderCars();
-renderFAQ();
+  renderCars();
+  renderFAQ();
 
-const params = new URLSearchParams(window.location.search);
+  const params = new URLSearchParams(window.location.search);
 
-const carId = params.get("car");
+  const carId = params.get("car");
 
-if(carId){
+  if(carId){
 
-setTimeout(()=>{
-openCarModal(parseInt(carId));
-},500);
+    setTimeout(() => {
+      openCarModal(parseInt(carId));
+    }, 500);
 
-}
+  }
 
 };
 function toggleMenu(){
