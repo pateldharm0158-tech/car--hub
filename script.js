@@ -730,7 +730,6 @@ alert("Already in Wishlist");
 
 }
 
-showWishlist();
 
 }
 function showWishlist(){
