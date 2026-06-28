@@ -72,9 +72,15 @@ content="https://pateldharm0158-tech.github.io/car--hub/ChatGPT%20Image%20Jun%20
   Magneto Carsz
 </div>
 <div class="hidden md:flex gap-8 text-sm font-medium">
-  <a href="login.html" class="hover:text-red-600">Login</a>
+ <a id="loginLink" href="login.html" class="hover:text-red-600">Login</a>
 
-  <a href="signup.html" class="hover:text-red-600">Signup</a>
+<a id="signupLink" href="signup.html" class="hover:text-red-600">Signup</a>
+  <a id="logoutLink"
+href="#"
+onclick="logoutUser()"
+class="hover:text-red-600 hidden">
+Logout
+</a>
 
   <a href="#" onclick="checkSellCar()" class="hover:text-red-600">
 Sell a Car
