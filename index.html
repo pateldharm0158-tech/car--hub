@@ -824,5 +824,23 @@ window.location.href="login.html";
 
 }
 </script>
+<script>
+function checkSellCar(){
+
+const user = localStorage.getItem("loggedInUser");
+
+if(user){
+window.location.href = "sell-car.html";
+}else{
+alert("Please Login or Signup First.");
+window.location.href = "login.html";
+}
+
+}
+</script>
+
+
+
+  
 </body>
 </html>
