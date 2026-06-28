@@ -509,7 +509,11 @@ EMI: ₹${Math.round(car.numericPrice/120).toLocaleString('en-IN')}/m
 <button
 onclick="event.stopPropagation(); addToWishlist(${car.id})"
 class="mt-4 bg-red-600 text-white px-4 py-2 rounded-lg wishlist-btn">
-❤️ Wishlist
+
+${wishlist.some(item => item.id === car.id)
+? "❤️ Wishlist"
+: "🤍 Wishlist"}
+
 </button>
 
 </div>
@@ -710,15 +714,13 @@ function searchCars() {
 
 let wishlist = [];
 
-function addToWishlist(id, button){
+function addToWishlist(id){
 
 const car = cars.find(c => c.id === id);
 
 if(!wishlist.some(item => item.id === id)){
 
 wishlist.push(car);
-
-button.innerHTML = "❤️ Wishlist";
 
 alert(car.name + " added to Wishlist ❤️");
 
@@ -727,6 +729,10 @@ alert(car.name + " added to Wishlist ❤️");
 alert("Already in Wishlist");
 
 }
+
+showWishlist();
+
+renderCars();
 
 }
 
@@ -934,22 +940,22 @@ document.getElementById('cars-section')
 
     
     
-  window.onload = () => {
+ window.onload = () => {
 
-  renderCars();
-  renderFAQ();
+renderCars();
+renderFAQ();
 
-  const params = new URLSearchParams(window.location.search);
+const params = new URLSearchParams(window.location.search);
 
-  const carId = params.get("car");
+const carId = params.get("car");
 
-  if(carId){
+if(carId){
 
-    setTimeout(() => {
-      openCarModal(parseInt(carId));
-    }, 500);
+setTimeout(()=>{
+openCarModal(parseInt(carId));
+},500);
 
-  }
+}
 
 };
 function toggleMenu(){
