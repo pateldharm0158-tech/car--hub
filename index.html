@@ -850,34 +850,6 @@ window.location.href = "login.html";
 }
 </script>
 
-  <script>
-
-window.onload = function(){
-
-const user = localStorage.getItem("loggedInUser");
-
-if(user){
-
-document.getElementById("loginLink").style.display = "none";
-document.getElementById("signupLink").style.display = "none";
-document.getElementById("logoutLink").style.display = "inline-block";
-
-}
-
-}
-
-function logoutUser(){
-
-localStorage.removeItem("loggedInUser");
-
-alert("Logout Successful");
-
-window.location.href="index.html";
-
-}
-
-</script>
-
 
 
   
