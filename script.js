@@ -934,22 +934,39 @@ document.getElementById('cars-section')
 
     
     
-  window.onload = () => {
+ window.onload = () => {
 
-  renderCars();
-  renderFAQ();
+renderCars();
+renderFAQ();
 
-  const params = new URLSearchParams(window.location.search);
+const params = new URLSearchParams(window.location.search);
 
-  const carId = params.get("car");
+const carId = params.get("car");
 
-  if(carId){
+if(carId){
 
-    setTimeout(() => {
-      openCarModal(parseInt(carId));
-    }, 500);
+setTimeout(()=>{
+openCarModal(parseInt(carId));
+},500);
 
-  }
+}
+
+// Welcome Popup
+if(localStorage.getItem("welcomeShown")){
+
+document.getElementById("welcomePopup").style.display="none";
+
+}else{
+
+document.getElementById("welcomePopup").style.display="none";
+
+setTimeout(()=>{
+
+document.getElementById("welcomePopup").style.display="flex";
+
+},4000);
+
+}
 
 };
 function toggleMenu(){
@@ -960,7 +977,11 @@ document
 
 }
 function closePopup(){
-  document.getElementById("welcomePopup").style.display = "none";
+
+document.getElementById("welcomePopup").style.display = "none";
+
+localStorage.setItem("welcomeShown","yes");
+
 }
 
 async function downloadCarPDF(){
