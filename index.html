@@ -850,6 +850,43 @@ window.location.href = "login.html";
 }
 </script>
 
+<div id="loginRequiredPopup"
+class="fixed inset-0 hidden bg-black/70 flex items-center justify-center z-[9999]">
+
+<div class="bg-white rounded-2xl p-8 w-[380px] relative text-center">
+
+<button
+onclick="closeLoginPopup()"
+class="absolute top-4 right-5 text-3xl font-bold">
+✕
+</button>
+
+<h2 class="text-3xl font-bold mb-4">
+Magneto Carsz
+</h2>
+
+<p class="text-gray-600 mb-6">
+Please Login or Signup First
+</p>
+
+<div class="flex gap-4 justify-center">
+
+<a href="login.html"
+class="bg-black text-white px-6 py-3 rounded-xl">
+Login
+</a>
+
+<a href="signup.html"
+class="bg-red-600 text-white px-6 py-3 rounded-xl">
+Signup
+</a>
+
+</div>
+
+</div>
+
+</div>
+  
 
 
   
