@@ -827,10 +827,13 @@ function checkReview(){
 const user = localStorage.getItem("loggedInUser");
 
 if(user){
-saveReview();
+
+    saveReview();
+
 }else{
-alert("Please Login or Signup First.");
-window.location.href="login.html";
+
+    showLoginPopup();
+
 }
 
 }
@@ -841,12 +844,22 @@ function checkSellCar(){
 const user = localStorage.getItem("loggedInUser");
 
 if(user){
-window.location.href = "sell-car.html";
+
+    window.location.href = "sell-car.html";
+
 }else{
-alert("Please Login or Signup First.");
-window.location.href = "login.html";
+
+    showLoginPopup();
+
 }
 
+}
+  function showLoginPopup() {
+    document.getElementById("loginRequiredPopup").classList.remove("hidden");
+}
+
+function closeLoginPopup() {
+    document.getElementById("loginRequiredPopup").classList.add("hidden");
 }
 </script>
 
