@@ -938,6 +938,17 @@ document.getElementById('cars-section')
 
 renderCars();
 renderFAQ();
+     const user = localStorage.getItem("loggedInUser");
+
+if(user){
+
+document.getElementById("loginLink").classList.add("hidden");
+
+document.getElementById("signupLink").classList.add("hidden");
+
+document.getElementById("logoutLink").classList.remove("hidden");
+
+}
 
 const params = new URLSearchParams(window.location.search);
 
@@ -1068,5 +1079,16 @@ heroVideo.play();
 },3000);
 
 });
+
+}
+
+
+function logoutUser(){
+
+localStorage.removeItem("loggedInUser");
+
+alert("Logged Out Successfully!");
+
+window.location.reload();
 
 }
