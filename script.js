@@ -1094,34 +1094,4 @@ showPopup(
 );
 
 }
-function showPopup(message){
 
-document.getElementById("popupMessage").innerText = message;
-
-document.getElementById("customPopup")
-.classList.remove("hidden");
-
-}
-
-function closePopup(){
-
-document.getElementById("customPopup")
-.classList.add("hidden");
-
-}
-
-function showPopup(message){
-
-document.getElementById("popupMessage").innerText = message;
-
-document.getElementById("customPopup")
-.classList.remove("hidden");
-
-}
-
-function closePopup(){
-
-document.getElementById("customPopup")
-.classList.add("hidden");
-
-}
