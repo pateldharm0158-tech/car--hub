@@ -4,6 +4,7 @@
 <title>Signup - Magneto Carsz</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="login-page">
@@ -53,13 +54,23 @@ const password=document.getElementById("password").value;
 createUserWithEmailAndPassword(auth,email,password)
 .then(()=>{
 
-showPopup("Signup Successful");
-  
-window.location="login.html";
+document.querySelector(".signup-container").style.display = "none";
+
+showPopup(
+"Magneto Carsz",
+"Account Created Successfully!",
+"login.html"
+);
 
 })
-.catch(error=>alert(error.message));
+.catch(error=>{
 
+showPopup(
+"Signup Failed",
+error.message
+);
+
+});
 });
 
 </script>
