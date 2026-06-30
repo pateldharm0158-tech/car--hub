@@ -1087,11 +1087,29 @@ function logoutUser(){
 
 localStorage.removeItem("loggedInUser");
 
-alert("Logged Out Successfully!");
-
-window.location.reload();
+showPopup(
+"Magneto Carsz",
+"Logged Out Successfully!",
+"index.html"
+);
 
 }
+function showPopup(message){
+
+document.getElementById("popupMessage").innerText = message;
+
+document.getElementById("customPopup")
+.classList.remove("hidden");
+
+}
+
+function closePopup(){
+
+document.getElementById("customPopup")
+.classList.add("hidden");
+
+}
+
 function showPopup(message){
 
 document.getElementById("popupMessage").innerText = message;
