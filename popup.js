@@ -34,14 +34,17 @@ position:relative;
 animation:popup .3s ease;
 ">
 
-<span onclick="closePopup('${redirect}')"
+<span
+id="popupClose"
 style="
 position:absolute;
 right:20px;
 top:10px;
 font-size:35px;
 cursor:pointer;
-">&times;</span>
+">
+&times;
+</span>
 
 <h2 style="
 font-size:38px;
@@ -59,7 +62,7 @@ ${message}
 </p>
 
 <button
-onclick="closePopup('${redirect}')"
+id="popupOk"
 style="
 background:#dc2626;
 color:white;
@@ -78,6 +81,13 @@ OK
 `;
 
 document.body.appendChild(popup);
+  document.getElementById("popupClose").onclick = function () {
+    closePopup(redirect);
+};
+
+document.getElementById("popupOk").onclick = function () {
+    closePopup(redirect);
+};
 
 }
 
