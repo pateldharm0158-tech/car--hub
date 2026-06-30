@@ -10,8 +10,7 @@ window.saveReview = async function(){
 const user = localStorage.getItem("loggedInUser");
 
 if(!user){
-alert("Please Login or Signup First to add a review.");
-window.location.href = "login.html";
+showLoginPopup();
 return;
 }
 
@@ -25,7 +24,12 @@ const review =
 document.getElementById("reviewText").value;
 
 if(!name || !review){
-alert("Fill all fields");
+
+showPopup(
+"Magneto Carsz",
+"Please fill all fields."
+);
+
 return;
 }
 
@@ -38,8 +42,10 @@ photo:`https://ui-avatars.com/api/?name=${name}&background=random`
 }
 );
 
-alert("Review Added");
-
+showPopup(
+"Magneto Carsz",
+"Review Added Successfully!"
+);
 document.getElementById("reviewName").value="";
 document.getElementById("reviewText").value="";
 
