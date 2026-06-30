@@ -53,8 +53,8 @@ const password=document.getElementById("password").value;
 createUserWithEmailAndPassword(auth,email,password)
 .then(()=>{
 
-alert("Signup Successful");
-
+showPopup("Signup Successful");
+  
 window.location="login.html";
 
 })
