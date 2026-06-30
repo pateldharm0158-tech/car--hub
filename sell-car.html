@@ -9,6 +9,7 @@
 <script src="https://cdn.tailwindcss.com"></script>
 
 <link rel="stylesheet" href="style.css">
+  <script src="popup.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
@@ -217,14 +218,23 @@ templateParams
 )
 .then(function() {
 
-showPopup("Thank You! Your car details have been submitted successfully.");
 document.getElementById("sellCarForm").reset();
+
+document.getElementById("sellCarForm").style.display = "none";
+
+showPopup(
+"Magneto Carsz",
+"Your Car Details Submitted Successfully!",
+"index.html"
+);
 
 })
 .catch(function(error) {
 
-alert("Failed to send details.");
-
+showPopup(
+"Submission Failed",
+"Please try again."
+);
 console.log(error);
 
 });
