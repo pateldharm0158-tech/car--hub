@@ -1,98 +1,92 @@
-import {
-  db,
-  collection,
-  addDoc,
-  getDocs
-} from "./firebase.js";
+function showPopup(title, message, redirect = null) {
 
-window.saveReview = async function () {
+let oldPopup = document.getElementById("customPopup");
 
-  const user = localStorage.getItem("loggedInUser");
+if (oldPopup) oldPopup.remove();
 
-  if (!user) {
-    showLoginPopup();
-    return;
-  }
+const popup = document.createElement("div");
 
-  const name = document.getElementById("reviewName").value.trim();
-  const review = document.getElementById("reviewText").value.trim();
+popup.id = "customPopup";
 
-  if (!name || !review) {
-    showPopup(
-      "Magneto Carsz",
-      "Please fill all fields."
-    );
-    return;
-  }
+popup.innerHTML = `
+<div style="
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.6);
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:999999;
+">
 
-  try {
+<div style="
+background:#fff;
+width:420px;
+max-width:90%;
+border-radius:25px;
+padding:35px;
+text-align:center;
+box-shadow:0 15px 40px rgba(0,0,0,.3);
+position:relative;
+animation:popup .3s ease;
+">
 
-    await addDoc(
-      collection(db, "reviews"),
-      {
-        name: name,
-        review: review,
-        photo: `https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&background=random`
-      }
-    );
+<span onclick="closePopup('${redirect}')"
+style="
+position:absolute;
+right:20px;
+top:10px;
+font-size:35px;
+cursor:pointer;
+">&times;</span>
 
-    document.getElementById("reviewName").value = "";
-    document.getElementById("reviewText").value = "";
+<h2 style="
+font-size:38px;
+font-weight:bold;
+margin-bottom:20px;
+">
+${title}
+</h2>
 
-    showPopup(
-      "Magneto Carsz",
-      "Review Added Successfully!"
-    );
+<p style="
+font-size:20px;
+margin-bottom:30px;
+">
+${message}
+</p>
 
-    loadReviews();
+<button
+onclick="closePopup('${redirect}')"
+style="
+background:#dc2626;
+color:white;
+border:none;
+padding:12px 40px;
+border-radius:12px;
+font-size:18px;
+cursor:pointer;
+">
+OK
+</button>
 
-  } catch (error) {
+</div>
 
-    console.log(error);
+</div>
+`;
 
-    showPopup(
-      "Magneto Carsz",
-      "Failed to add review."
-    );
-
-  }
-
-};
-
-async function loadReviews() {
-
-  const container = document.getElementById("reviewsContainer");
-
-  if (!container) return;
-
-  container.innerHTML = "";
-
-  const snapshot = await getDocs(collection(db, "reviews"));
-
-  snapshot.forEach((doc) => {
-
-    const data = doc.data();
-
-    container.innerHTML += `
-      <div class="bg-white p-8 rounded-3xl shadow min-w-[350px] max-w-[350px]">
-
-        <img
-          src="https://ui-avatars.com/api/?name=${encodeURIComponent(data.name)}&background=random"
-          class="w-20 h-20 rounded-full mx-auto mb-4">
-
-        <p class="italic text-gray-600 text-center">
-          "${data.review}"
-        </p>
-
-        <h3 class="font-bold text-xl text-center mt-4">
-          ${data.name}
-        </h3>
-
-      </div>
-    `;
-
-  });
+document.body.appendChild(popup);
 
 }
 
-loadReviews();
+function closePopup(redirect){
+
+document.getElementById("customPopup").remove();
+
+if(redirect){
+window.location = redirect;
+}
+
+}
